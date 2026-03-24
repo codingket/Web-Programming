@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Domino's Pizza | NITW</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #f4f7f9;
+            text-align: center;
+        }
+
+        .navbar {
+            background-color: white;
+            padding: 20px 50px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        .navbar a { text-decoration: none; color: #006491; font-weight: 700; }
+
+        /* Domino's Blue Banner */
+        .stall-banner {
+            background-color: #006491; 
+            color: white;
+            padding: 80px 20px;
+            border-bottom: 8px solid #e31937; /* Domino's Red Accent */
+        }
+
+        .stall-banner h1 { 
+            margin: 0; 
+            font-size: 50px; 
+            font-weight: 800; 
+        }
+
+        .content-container { width: 1000px; margin: 40px auto; }
+
+        .info-card {
+            background-color: white;
+            padding: 40px;
+            border-radius: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            text-align: left;
+        }
+
+        .card-heading { font-size: 24px; font-weight: 800; margin-bottom: 25px; color: #333; }
+
+        .menu-grid { display: flex; flex-wrap: wrap; gap: 25px; }
+
+        .category-title {
+            width: 100%;
+            color: #e31937;
+            font-size: 18px;
+            font-weight: 800;
+            text-transform: uppercase;
+            margin: 30px 0 10px 0;
+            border-bottom: 2px solid #006491;
+            padding-bottom: 5px;
+        }
+
+        .food-card {
+            background-color: white;
+            border: 1px solid #eee;
+            border-radius: 18px;
+            width: 220px;
+            overflow: hidden;
+            transition: 0.3s ease;
+        }
+
+        .food-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.08); }
+
+        .food-photo { width: 100%; height: 140px; object-fit: cover; background-color: #f1f1f1; }
+
+        .food-info { padding: 15px; }
+
+        .food-name { font-weight: 700; font-size: 15px; margin: 0; height: 38px; color: #444; }
+
+        .food-price { color: #006491; font-weight: 800; margin-top: 8px; font-size: 16px; }
+
+        .review-box { border-left: 5px solid #006491; padding-left: 20px; margin-bottom: 30px; }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <a href="index.html">← Back to Campus Directory</a>
+    </div>
+
+    <div class="stall-banner">
+        <h1>Domino's Pizza</h1>
+    </div>
+
+    <div class="content-container">
+        
+        <div class="info-card">
+            <p style="color: #e31937; font-weight: 800; font-size: 13px;">📍 FOOD COURT, NIT WARANGAL</p>
+            <p>Hot and fresh pizzas delivered right to the heart of campus. From classic Margherita to our new Paratha Pizzas.</p>
+        </div>
+
+        <div class="info-card">
+            <p class="card-heading">🍕 Pizza Menu</p>
+            
+            <div class="menu-grid">
+
+    <!-- VEG PIZZAS -->
+    <div class="category-title">Veg Pizzas</div>
+
+    <div class="food-card"><img src="margherita.jpg" class="food-photo"><div class="food-info"><p class="food-name">Margherita</p><p class="food-price">₹109</p></div></div>
+    <div class="food-card"><img src="farmhouse.jpg" class="food-photo"><div class="food-info"><p class="food-name">Farmhouse</p><p class="food-price">₹259</p></div></div>
+    <div class="food-card"><img src="peppy_paneer.jpg" class="food-photo"><div class="food-info"><p class="food-name">Peppy Paneer</p><p class="food-price">₹259</p></div></div>
+    <div class="food-card"><img src="veg_extravaganza.jpg" class="food-photo"><div class="food-info"><p class="food-name">Veg Extravaganza</p><p class="food-price">₹299</p></div></div>
+    <div class="food-card"><img src="deluxe_veggie.jpg" class="food-photo"><div class="food-info"><p class="food-name">Deluxe Veggie</p><p class="food-price">₹279</p></div></div>
+    <div class="food-card"><img src="cheese_n_corn.jpg" class="food-photo"><div class="food-info"><p class="food-name">Cheese & Corn</p><p class="food-price">₹199</p></div></div>
+
+    <!-- NON VEG -->
+    <div class="category-title">Non-Veg Pizzas</div>
+
+    <div class="food-card"><img src="chicken_sausage.jpg" class="food-photo"><div class="food-info"><p class="food-name">Chicken Sausage</p><p class="food-price">₹199</p></div></div>
+    <div class="food-card"><img src="chicken_golden_delight.jpg" class="food-photo"><div class="food-info"><p class="food-name">Chicken Golden Delight</p><p class="food-price">₹309</p></div></div>
+    <div class="food-card"><img src="chicken_dominator.jpg" class="food-photo"><div class="food-info"><p class="food-name">Chicken Dominator</p><p class="food-price">₹359</p></div></div>
+    <div class="food-card"><img src="pepper_barbecue.jpg" class="food-photo"><div class="food-info"><p class="food-name">Pepper Barbecue Chicken</p><p class="food-price">₹329</p></div></div>
+    <div class="food-card"><img src="chicken_fiesta.jpg" class="food-photo"><div class="food-info"><p class="food-name">Chicken Fiesta</p><p class="food-price">₹299</p></div></div>
+
+    <!-- PIZZA MANIA -->
+    <div class="category-title">Pizza Mania</div>
+
+    <div class="food-card"><img src="tomato.jpg" class="food-photo"><div class="food-info"><p class="food-name">Tomato</p><p class="food-price">₹59</p></div></div>
+    <div class="food-card"><img src="onion.jpg" class="food-photo"><div class="food-info"><p class="food-name">Onion</p><p class="food-price">₹69</p></div></div>
+    <div class="food-card"><img src="golden_corn.jpg" class="food-photo"><div class="food-info"><p class="food-name">Golden Corn</p><p class="food-price">₹89</p></div></div>
+    <div class="food-card"><img src="paneer_capsicum.jpg" class="food-photo"><div class="food-info"><p class="food-name">Paneer & Capsicum</p><p class="food-price">₹129</p></div></div>
+    <div class="food-card"><img src="cheese_tomato.jpg" class="food-photo"><div class="food-info"><p class="food-name">Cheese & Tomato</p><p class="food-price">₹109</p></div></div>
+
+    <!-- SPECIALTY -->
+    <div class="category-title">Specialty Pizzas</div>
+
+    <div class="food-card"><img src="double_cheese.jpg" class="food-photo"><div class="food-info"><p class="food-name">Double Cheese Burst</p><p class="food-price">₹349</p></div></div>
+    <div class="food-card"><img src="mexican_green_wave.jpg" class="food-photo"><div class="food-info"><p class="food-name">Mexican Green Wave</p><p class="food-price">₹299</p></div></div>
+    <div class="food-card"><img src="indian_tandoori.jpg" class="food-photo"><div class="food-info"><p class="food-name">Indian Tandoori Paneer</p><p class="food-price">₹319</p></div></div>
+
+    <!-- PARATHA PIZZA -->
+    <div class="category-title">Paratha Pizza</div>
+
+    <div class="food-card"><img src="corn_paratha.jpg" class="food-photo"><div class="food-info"><p class="food-name">Corn & Cheese Paratha Pizza</p><p class="food-price">₹179</p></div></div>
+    <div class="food-card"><img src="paneer_paratha.jpg" class="food-photo"><div class="food-info"><p class="food-name">Paneer Paratha Pizza</p><p class="food-price">₹209</p></div></div>
+    <div class="food-card"><img src="chicken_keema_paratha.jpg" class="food-photo"><div class="food-info"><p class="food-name">Chicken Keema Paratha Pizza</p><p class="food-price">₹249</p></div></div>
+
+</div>
+        </div>
+
+        <div class="info-card">
+            <p class="card-heading">⭐ Student Reviews</p>
+            <div class="review-box">
+                <p style="color: #ffa000;">★★★★★</p>
+                <p>"The best value is definitely Pizza Mania. Great for a quick lunch between labs!"</p>
+                <p style="font-weight: 700; color: #006491;">- Rahul (3rd Year)</p>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

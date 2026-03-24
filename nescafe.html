@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nescafe | NITW</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #fafafa;
+            text-align: center;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            background-color: white;
+            padding: 20px 50px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: #111;
+            font-weight: 700;
+        }
+
+        /* BANNER */
+        .stall-banner {
+            background-color: #111;
+            color: white;
+            padding: 80px 20px;
+        }
+
+        .stall-banner h1 {
+            margin: 0;
+            font-size: 50px;
+            font-weight: 800;
+        }
+
+        /* CONTAINER */
+        .content-container {
+            width: 1000px;
+            margin: 40px auto;
+        }
+
+        /* INFO CARD */
+        .info-card {
+            background-color: white;
+            padding: 40px;
+            border-radius: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            text-align: left;
+        }
+
+        .location-tag {
+            color: #444;
+            font-weight: 800;
+            font-size: 13px;
+        }
+
+        .card-heading {
+            font-size: 24px;
+            font-weight: 800;
+            margin-bottom: 25px;
+        }
+
+        /* GRID */
+        .menu-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+
+        .category-title {
+            width: 100%;
+            color: #111;
+            font-size: 18px;
+            font-weight: 800;
+            text-transform: uppercase;
+            margin-top: 30px;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 5px;
+        }
+
+        /* CARD */
+        .food-card {
+            background-color: white;
+            border: 1px solid #eee;
+            border-radius: 18px;
+            width: 220px;
+            overflow: hidden;
+            transition: 0.3s ease;
+        }
+
+        .food-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .food-photo {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+            background-color: #ddd;
+        }
+
+        .food-info {
+            padding: 15px;
+        }
+
+        .food-name {
+            font-weight: 700;
+            font-size: 16px;
+            margin: 0;
+        }
+
+        .food-price {
+            color: #d32f2f;
+            font-weight: 800;
+            margin-top: 8px;
+        }
+
+        /* REVIEWS */
+        .review-box {
+            border-left: 5px solid #111;
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        .stars {
+            color: #ffa000;
+        }
+
+        .student-credit {
+            font-weight: 700;
+            color: #111;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <div class="navbar">
+        <a href="index.html">← Back to Campus Directory</a>
+    </div>
+
+    <!-- BANNER -->
+    <div class="stall-banner">
+        <h1>Nescafe</h1>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="content-container">
+
+        <!-- INFO -->
+        <div class="info-card">
+            <p class="location-tag">📍 Library Plaza, NIT Warangal</p>
+            <p style="color:#444;">
+                The ultimate student hangout for quick bites, Maggi varieties, and late-night cravings. Known for its wide range of flavors and fast service.
+            </p>
+        </div>
+
+        <!-- MENU -->
+        <div class="info-card">
+            <p class="card-heading">🍜 Full Menu</p>
+
+            <div class="menu-grid">
+
+                <!-- CLASSIC -->
+                <div class="category-title">Classic</div>
+                <div class="food-card"><img src="maggi.jpg" class="food-photo"><div class="food-info"><p class="food-name">Original Masala Maggi</p><p class="food-price">₹48</p></div></div>
+                <div class="food-card"><img src="maggi.jpg" class="food-photo"><div class="food-info"><p class="food-name">Vegetable Masala Maggi</p><p class="food-price">₹48</p></div></div>
+                <div class="food-card"><img src="maggi.jpg" class="food-photo"><div class="food-info"><p class="food-name">Chilli Maggi</p><p class="food-price">₹48</p></div></div>
+                <div class="food-card"><img src="maggi.jpg" class="food-photo"><div class="food-info"><p class="food-name">Haldi Maggi</p><p class="food-price">₹48</p></div></div>
+                <div class="food-card"><img src="maggi.jpg" class="food-photo"><div class="food-info"><p class="food-name">Capsicum Maggi</p><p class="food-price">₹48</p></div></div>
+                <div class="food-card"><img src="maggi.jpg" class="food-photo"><div class="food-info"><p class="food-name">Tomato Chatpata</p><p class="food-price">₹48</p></div></div>
+
+                <!-- PREMIUM -->
+                <div class="category-title">Premium</div>
+                <div class="food-card"><img src="maggi.jpg" class="food-photo"><div class="food-info"><p class="food-name">Special Masala Maggi</p><p class="food-price">₹60</p></div></div>
+                <div class="food-card"><img src="maggi.jpg" class="food-photo"><div class="food-info"><p class="food-name">Double Masala Maggi</p><p class="food-price">₹60</p></div></div>
+                <div class="food-card"><img src="maggi.jpg" class="food-photo"><div class="food-info"><p class="food-name">Garlic Maggi</p><p class="food-price">₹60</p></div></div>
+                <div class="food-card"><img src="maggi.jpg" class="food-photo"><div class="food-info"><p class="food-name">Fresh Pepper Maggi</p><p class="food-price">₹60</p></div></div>
+                <div class="food-card"><img src="maggi.jpg" class="food-photo"><div class="food-info"><p class="food-name">Jain Maggi</p><p class="food-price">₹60</p></div></div>
+
+                <!-- EXOTIC -->
+                <div class="category-title">Exotic</div>
+                <div class="food-card"><img src="maggi.jpg" class="food-photo"><div class="food-info"><p class="food-name">Oregano Maggi</p><p class="food-price">₹80</p></div></div>
+                <div class="food-card"><img src="maggi.jpg" class="food-photo"><div class="food-info"><p class="food-name">Patiala Tandoori Maggi</p><p class="food-price">₹80</p></div></div>
+                <div class="food-card"><img src="maggi.jpg" class="food-photo"><div class="food-info"><p class="food-name">Chilli Garlic Maggi</p><p class="food-price">₹80</p></div></div>
+                <div class="food-card"><img src="maggi.jpg" class="food-photo"><div class="food-info"><p class="food-name">Peri Peri Maggi</p><p class="food-price">₹80</p></div></div>
+                <div class="food-card"><img src="maggi.jpg" class="food-photo"><div class="food-info"><p class="food-name">Shillong Schezwan Maggi</p><p class="food-price">₹80</p></div></div>
+                <div class="food-card"><img src="maggi.jpg" class="food-photo"><div class="food-info"><p class="food-name">Aata Masala Maggi</p><p class="food-price">₹80</p></div></div>
+                <div class="food-card"><img src="maggi.jpg" class="food-photo"><div class="food-info"><p class="food-name">Butter Double Masala Maggi</p><p class="food-price">₹80</p></div></div>
+                <div class="food-card"><img src="maggi.jpg" class="food-photo"><div class="food-info"><p class="food-name">Desi Cheese Maggi</p><p class="food-price">₹80</p></div></div>
+
+                <!-- LIMITED -->
+                <div class="category-title">Limited</div>
+                <div class="food-card"><img src="maggi.jpg" class="food-photo"><div class="food-info"><p class="food-name">Rajasthani Chutney Maggi</p><p class="food-price">₹99</p></div></div>
+                <div class="food-card"><img src="maggi.jpg" class="food-photo"><div class="food-info"><p class="food-name">Thai Maggi</p><p class="food-price">₹99</p></div></div>
+                <div class="food-card"><img src="maggi.jpg" class="food-photo"><div class="food-info"><p class="food-name">Tandoori Paneer Maggi</p><p class="food-price">₹99</p></div></div>
+                <div class="food-card"><img src="maggi.jpg" class="food-photo"><div class="food-info"><p class="food-name">Hong Kong Fusion Maggi</p><p class="food-price">₹99</p></div></div>
+                <div class="food-card"><img src="maggi.jpg" class="food-photo"><div class="food-info"><p class="food-name">Masala Oats Noodles</p><p class="food-price">₹99</p></div></div>
+                <div class="food-card"><img src="maggi.jpg" class="food-photo"><div class="food-info"><p class="food-name">Bangkok Sweet Noodles</p><p class="food-price">₹99</p></div></div>
+                <div class="food-card"><img src="maggi.jpg" class="food-photo"><div class="food-info"><p class="food-name">Mexican Noodles</p><p class="food-price">₹99</p></div></div>
+
+            </div>
+        </div>
+
+        <!-- REVIEWS -->
+        <div class="info-card">
+            <p class="card-heading">⭐ Student Reviews</p>
+
+            <div class="review-box">
+                <p class="stars">★★★★★</p>
+                <p>"Best place for late-night Maggi cravings."</p>
+                <p class="student-credit">- Rohit (3rd Year)</p>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

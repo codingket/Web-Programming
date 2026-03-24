@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NITW Eats</title>
+    <style>
+        /* ===== GLOBAL ===== */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image:linear-gradient(90deg,rgb(235, 212, 239),rgb(255, 255, 255),rgb(245, 195, 245));
+            color: #111827;
+        }
+
+        /* ===== NAVBAR ===== */
+        .navbar {
+           background: linear-gradient(45deg, #7c3aed 0%, #4338ca 100%);
+            padding: 20px 8%;
+            position: sticky;
+            top: 0;
+            z-index: 3000;
+            outline:2px solid white;
+        }
+
+        .nav-left {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .navbar-logo {
+            font-size: 28px;
+            font-weight: bold;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            color: white;
+        }
+
+        .logo {
+            height: 80px;
+            width: 110px;
+            border-radius:80%;
+            
+        }
+
+        /* ===== HERO ===== */
+        .hero-section {
+            background: linear-gradient(135deg, #7c3aed, #a78bfa);
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .hero-section h1 {
+            font-size: 60px;
+            margin-bottom: 10px;
+            font-variant: small-caps;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        .hero-section p {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        /* ===== CONTAINER ===== */
+        .main-container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 20px;
+            padding-left:300px;
+        }
+
+        /* ===== GRID ===== */
+        .stall-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        /* ===== CARD ===== */
+        .stall-card {
+            background-color: white;
+            border-radius: 20px;
+            overflow: hidden;
+            text-decoration: none;
+            color: #111827;
+            box-shadow: 0 4px 10px rgba(124,58,237,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .stall-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 0 3px rgba(124,58,237,0.3),
+                        0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .stall-image {
+            height: 180px;
+            width: 100%;
+            background-color: #e5e7eb;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .stall-info {
+            padding: 20px;
+        }
+
+        .category-tag {
+            color: #7c3aed;
+            font-size: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .stall-name {
+            font-size: 20px;
+            margin: 5px 0;
+            font-weight: bold;
+            color:#7c3aed;
+        }
+
+        .stall-loc {
+            font-size: 14px;
+            color: #6b7280;
+        }
+
+        /* ===== FOOTER ===== */
+        .page-footer {
+            text-align: center;
+            padding: 40px;
+            color: #6b7280;
+            font-size: 14px;
+        }
+        /* ===== INTRO SECTION ===== */
+.intro-section {
+    display: flex;
+    justify-content: center;
+    padding: 60px 20px;
+}
+
+.intro-container {
+    max-width: 800px;
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(124,58,237,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.intro-container h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #7c3aed;
+}
+
+.intro-container p {
+    font-size: 20px;
+    line-height: 1.7;
+    color: #4b5563;
+    margin-bottom: 15px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.intro-container:hover{
+   transform: translateY(-8px);
+   box-shadow: 0 0 0 3px rgba(124,58,237,0.3),
+                        0 10px 25px rgba(0,0,0,0.1);
+}
+    </style>
+</head>
+
+<body>
+
+    
+    <div class="navbar">
+        <div class="nav-left">
+            <img src="logo.png" class="logo">
+            <span class="navbar-logo">NITW Eats</span>
+        </div>
+    </div>
+
+    
+    <div class="hero-section">
+         <h1>Find Your Next Bite at NITW</h1>
+    <p>Search for food, cafes, and snacks across campus</p>
+    </div>
+
+    
+     <section class="intro-section">
+    <div class="intro-container">
+        <h2>Welcome to NITW Eats</h2>
+
+        <p>
+            NITW Eats is a centralized platform designed to help students easily discover and explore food spots across the NIT Warangal campus. Instead of relying on word-of-mouth or wandering around, this website brings together all major stalls, cafes, and eateries in one place.
+        </p>
+
+        <p>
+            Whether you’re looking for a quick coffee between classes, a late-night snack near the hostels, or a proper meal at the food court, NITW Eats helps you find exactly what you need with minimal effort.
+        </p>
+
+        <p>
+            The goal is simple: reduce the time spent searching and increase the time spent enjoying. With a clean interface and structured layout, the platform is built to feel intuitive for every student.
+        </p>
+    </div>
+</section>
+    <div class="main-container">
+        <div class="stall-list">
+            
+            <a href="madras.html" class="stall-card">
+                <div class="stall-image" style="background-image: url('madras.jpg');"></div>
+                <div class="stall-info">
+                    <span class="category-tag">Beverages</span>
+                    <p class="stall-name">Madras Filter Coffee</p>
+                    <p class="stall-loc">📍 Food Court</p>
+                </div>
+            </a>
+
+            <a href="amul.html" class="stall-card">
+                <div class="stall-image" style="background-image: url('amul.jpg');"></div>
+                <div class="stall-info">
+                    <span class="category-tag">Desserts</span>
+                    <p class="stall-name">Amul Ice Cream</p>
+                    <p class="stall-loc">📍 Food Court</p>
+                </div>
+            </a>
+
+            <a href="countryoven.html" class="stall-card">
+                <div class="stall-image" style="background-image: url('countryoven.jpg');"></div>
+                <div class="stall-info">
+                    <span class="category-tag">Bakery</span>
+                    <p class="stall-name">Country Oven</p>
+                    <p class="stall-loc">📍 Food Court</p>
+                </div>
+            </a>
+          <br>
+            <a href="nescafe.html" class="stall-card">
+                <div class="stall-image" style="background-image: url('nescafe.jpeg');"></div>
+                <div class="stall-info">
+                    <span class="category-tag">Cafe</span>
+                    <p class="stall-name">Nescafe</p>
+                    <p class="stall-loc">📍 Library Plaza</p>
+                </div>
+            </a>
+
+            <a href="dominos.html" class="stall-card">
+                <div class="stall-image" style="background-image: url('dominos.jpg');"></div>
+                <div class="stall-info">
+                    <span class="category-tag">Fast Food</span>
+                    <p class="stall-name">Dominos Pizza</p>
+                    <p class="stall-loc">📍 Hostel Blocks</p>
+                </div>
+            </a>
+
+            <a href="taaza.html" class="stall-card">
+                <div class="stall-image" style="background-image: url('taaza.webp');"></div>
+                <div class="stall-info">
+                    <span class="category-tag">Breakfast</span>
+                    <p class="stall-name">Taaza Tiffins</p>
+                    <p class="stall-loc">📍 Hostel Blocks</p>
+                </div>
+            </a>
+
+        </div>
+    </div>
+
+    
+    <div class="page-footer">
+        © 2026 NIT Warangal Dining Directory
+    </div>
+
+</body>
+</html>
