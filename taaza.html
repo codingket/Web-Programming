@@ -98,37 +98,195 @@
 
         <div class="info-card">
             <p class="card-heading">🍽️ Breakfast & Meals Menu</p>
+
+            <!-- SEARCH BAR -->
+            <input type="text" id="menuSearch" placeholder="Search items..."
+                style="padding:10px; width:300px; border-radius:10px; border:1px solid #ccc; margin-bottom:20px;">
             
             <div class="menu-grid">
 
+                <!-- CLASSIC TIFFINS -->
                 <div class="category-title">Classic Tiffins</div>
-                <div class="food-card"><img src="idly.jpg" class="food-photo"><div class="food-info"><p class="food-name">Idly (1 Pc)</p><p class="food-price">₹10</p></div></div>
-                <div class="food-card"><img src="vada.jpg" class="food-photo"><div class="food-info"><p class="food-name">Vada (1 Pc)</p><p class="food-price">₹15</p></div></div>
-                <div class="food-card"><img src="karam_idly.jpg" class="food-photo"><div class="food-info"><p class="food-name">Ghee Karam Idly</p><p class="food-price">₹20</p></div></div>
-                <div class="food-card"><img src="poori.jpg" class="food-photo"><div class="food-info"><p class="food-name">Poori (1 Pc)</p><p class="food-price">₹15</p></div></div>
-                <div class="food-card"><img src="upma.jpg" class="food-photo"><div class="food-info"><p class="food-name">Upma</p><p class="food-price">₹30</p></div></div>
-                <div class="food-card"><img src="bonda.jpg" class="food-photo"><div class="food-info"><p class="food-name">Mysore Bonda (1 Pc)</p><p class="food-price">₹10</p></div></div>
-
+                
+                <div class="food-card" data-name="Idly (1 Pc)">
+                    <img src="items/idly.jpg" class="food-photo">
+                    <div class="food-info">
+                        <p class="food-name">Idly (1 Pc)</p>
+                        <p class="food-price">₹10</p>
+                    </div>
+                </div>
+                
+                <div class="food-card" data-name="Vada (1 Pc)">
+                    <img src="items/vada.jpg" class="food-photo">
+                    <div class="food-info">
+                        <p class="food-name">Vada (1 Pc)</p>
+                        <p class="food-price">₹15</p>
+                    </div>
+                </div>
+                
+                <div class="food-card" data-name="Ghee Karam Idly">
+                    <img src="items/karam_idly.jpg" class="food-photo">
+                    <div class="food-info">
+                        <p class="food-name">Ghee Karam Idly</p>
+                        <p class="food-price">₹20</p>
+                    </div>
+                </div>
+                
+                <div class="food-card" data-name="Poori (1 Pc)">
+                    <img src="items/poori.jpg" class="food-photo">
+                    <div class="food-info">
+                        <p class="food-name">Poori (1 Pc)</p>
+                        <p class="food-price">₹15</p>
+                    </div>
+                </div>
+                
+                <div class="food-card" data-name="Upma">
+                    <img src="items/upma.jpg" class="food-photo">
+                    <div class="food-info">
+                        <p class="food-name">Upma</p>
+                        <p class="food-price">₹30</p>
+                    </div>
+                </div>
+                
+                <div class="food-card" data-name="Mysore Bonda (1 Pc)">
+                    <img src="items/bonda.jpg" class="food-photo">
+                    <div class="food-info">
+                        <p class="food-name">Mysore Bonda (1 Pc)</p>
+                        <p class="food-price">₹10</p>
+                    </div>
+                </div>
+                
+                
+                <!-- DOSAS & PESARATTU -->
                 <div class="category-title">Dosas & Pesarattu</div>
-                <div class="food-card"><img src="plain_dosa.jpg" class="food-photo"><div class="food-info"><p class="food-name">Plain Dosa</p><p class="food-price">₹35</p></div></div>
-                <div class="food-card"><img src="masala_dosa.jpg" class="food-photo"><div class="food-info"><p class="food-name">Masala Dosa</p><p class="food-price">₹45</p></div></div>
-                <div class="food-card"><img src="onion_dosa.jpg" class="food-photo"><div class="food-info"><p class="food-name">Onion Dosa</p><p class="food-price">₹50</p></div></div>
-                <div class="food-card"><img src="cheese_dosa.jpg" class="food-photo"><div class="food-info"><p class="food-name">Cheese Dosa</p><p class="food-price">₹80</p></div></div>
-                <div class="food-card"><img src="pesarattu.jpg" class="food-photo"><div class="food-info"><p class="food-name">Pesarattu</p><p class="food-price">₹45</p></div></div>
-                <div class="food-card"><img src="ravva_dosa.jpg" class="food-photo"><div class="food-info"><p class="food-name">Ravva Dosa</p><p class="food-price">₹50</p></div></div>
-
+                
+                <div class="food-card" data-name="Plain Dosa">
+                    <img src="items/plain_dosa.jpg" class="food-photo">
+                    <div class="food-info">
+                        <p class="food-name">Plain Dosa</p>
+                        <p class="food-price">₹35</p>
+                    </div>
+                </div>
+                
+                <div class="food-card" data-name="Masala Dosa">
+                    <img src="items/masala_dosa.jpg" class="food-photo">
+                    <div class="food-info">
+                        <p class="food-name">Masala Dosa</p>
+                        <p class="food-price">₹45</p>
+                    </div>
+                </div>
+                
+                <div class="food-card" data-name="Onion Dosa">
+                    <img src="items/onion_dosa.jpg" class="food-photo">
+                    <div class="food-info">
+                        <p class="food-name">Onion Dosa</p>
+                        <p class="food-price">₹50</p>
+                    </div>
+                </div>
+                
+                <div class="food-card" data-name="Cheese Dosa">
+                    <img src="items/cheese_dosa.jpg" class="food-photo">
+                    <div class="food-info">
+                        <p class="food-name">Cheese Dosa</p>
+                        <p class="food-price">₹80</p>
+                    </div>
+                </div>
+                
+                <div class="food-card" data-name="Pesarattu">
+                    <img src="items/pesarattu.jpg" class="food-photo">
+                    <div class="food-info">
+                        <p class="food-name">Pesarattu</p>
+                        <p class="food-price">₹45</p>
+                    </div>
+                </div>
+                
+                <div class="food-card" data-name="Ravva Dosa">
+                    <img src="items/ravva_dosa.jpg" class="food-photo">
+                    <div class="food-info">
+                        <p class="food-name">Ravva Dosa</p>
+                        <p class="food-price">₹50</p>
+                    </div>
+                </div>
+                
+                
+                <!-- RICE ITEMS -->
                 <div class="category-title">Rice Items</div>
-                <div class="food-card"><img src="lemon_rice.jpg" class="food-photo"><div class="food-info"><p class="food-name">Lemon Rice</p><p class="food-price">₹50</p></div></div>
-                <div class="food-card"><img src="veg_biryani.jpg" class="food-photo"><div class="food-info"><p class="food-name">Veg Biryani</p><p class="food-price">₹50</p></div></div>
-                <div class="food-card"><img src="sambar_rice.jpg" class="food-photo"><div class="food-info"><p class="food-name">Sambar Rice</p><p class="food-price">₹50</p></div></div>
-                <div class="food-card"><img src="curd_rice.jpg" class="food-photo"><div class="food-info"><p class="food-name">Curd Rice</p><p class="food-price">₹50</p></div></div>
-
+                
+                <div class="food-card" data-name="Lemon Rice">
+                    <img src="items/lemon_rice.jpg" class="food-photo">
+                    <div class="food-info">
+                        <p class="food-name">Lemon Rice</p>
+                        <p class="food-price">₹50</p>
+                    </div>
+                </div>
+                
+                <div class="food-card" data-name="Veg Biryani">
+                    <img src="items/veg_biryani.jpg" class="food-photo">
+                    <div class="food-info">
+                        <p class="food-name">Veg Biryani</p>
+                        <p class="food-price">₹50</p>
+                    </div>
+                </div>
+                
+                <div class="food-card" data-name="Sambar Rice">
+                    <img src="items/sambar_rice.jpg" class="food-photo">
+                    <div class="food-info">
+                        <p class="food-name">Sambar Rice</p>
+                        <p class="food-price">₹50</p>
+                    </div>
+                </div>
+                
+                <div class="food-card" data-name="Curd Rice">
+                    <img src="items/curd_rice.jpg" class="food-photo">
+                    <div class="food-info">
+                        <p class="food-name">Curd Rice</p>
+                        <p class="food-price">₹50</p>
+                    </div>
+                </div>
+                
+                
+                <!-- DRINKS & JUICES -->
                 <div class="category-title">Drinks & Juices</div>
-                <div class="food-card"><img src="taaza_tea.jpg" class="food-photo"><div class="food-info"><p class="food-name">Tea</p><p class="food-price">₹10</p></div></div>
-                <div class="food-card"><img src="taaza_coffee.jpg" class="food-photo"><div class="food-info"><p class="food-name">Filter Coffee</p><p class="food-price">₹15</p></div></div>
-                <div class="food-card"><img src="badam_milk.jpg" class="food-photo"><div class="food-info"><p class="food-name">Badam Milk</p><p class="food-price">₹20</p></div></div>
-                <div class="food-card"><img src="rose_milk.jpg" class="food-photo"><div class="food-info"><p class="food-name">Rose Milk</p><p class="food-price">₹35</p></div></div>
-                <div class="food-card"><img src="lassi.jpg" class="food-photo"><div class="food-info"><p class="food-name">Sweet Lassi</p><p class="food-price">₹30</p></div></div>
+                
+                <div class="food-card" data-name="Tea">
+                    <img src="items/taaza_tea.jpg" class="food-photo">
+                    <div class="food-info">
+                        <p class="food-name">Tea</p>
+                        <p class="food-price">₹10</p>
+                    </div>
+                </div>
+                
+                <div class="food-card" data-name="Filter Coffee">
+                    <img src="items/taaza_coffee.jpg" class="food-photo">
+                    <div class="food-info">
+                        <p class="food-name">Filter Coffee</p>
+                        <p class="food-price">₹15</p>
+                    </div>
+                </div>
+                
+                <div class="food-card" data-name="Badam Milk">
+                    <img src="items/badam_milk.jpg" class="food-photo">
+                    <div class="food-info">
+                        <p class="food-name">Badam Milk</p>
+                        <p class="food-price">₹20</p>
+                    </div>
+                </div>
+                
+                <div class="food-card" data-name="Rose Milk">
+                    <img src="items/rose_milk.jpg" class="food-photo">
+                    <div class="food-info">
+                        <p class="food-name">Rose Milk</p>
+                        <p class="food-price">₹35</p>
+                    </div>
+                </div>
+                
+                <div class="food-card" data-name="Sweet Lassi">
+                    <img src="items/lassi.jpg" class="food-photo">
+                    <div class="food-info">
+                        <p class="food-name">Sweet Lassi</p>
+                        <p class="food-price">₹30</p>
+                    </div>
+                </div>
 
             </div>
         </div>
