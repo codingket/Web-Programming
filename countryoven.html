@@ -100,46 +100,181 @@
             <p class="card-heading">🥐 Bakery Menu</p>
             
             <div class="menu-grid">
+                <!-- SEARCH BAR -->
+                <input type="text" id="menuSearch" placeholder="Search items..."
+                    style="padding:10px; width:300px; border-radius:10px; border:1px solid #ccc; margin-bottom:20px;">
 
-                <div class="category-title">Puffs & Savories</div>
-                <div class="food-card"><img src="veg_puff.jpg" class="food-photo"><div class="food-info"><p class="food-name">Veg Puff</p><p class="food-price">₹20</p></div></div>
-                <div class="food-card"><img src="egg_puff.jpg" class="food-photo"><div class="food-info"><p class="food-name">Egg Puff</p><p class="food-price">₹25</p></div></div>
-                <div class="food-card"><img src="paneer_puff.jpg" class="food-photo"><div class="food-info"><p class="food-name">Paneer Puff</p><p class="food-price">₹35</p></div></div>
-                <div class="food-card"><img src="cheese_puff.jpg" class="food-photo"><div class="food-info"><p class="food-name">Cheese Puff</p><p class="food-price">₹40</p></div></div>
-                <div class="food-card"><img src="bingo.jpg" class="food-photo"><div class="food-info"><p class="food-name">Bingo Chips</p><p class="food-price">₹20</p></div></div>
-
-                <div class="category-title">Burgers</div>
-                <div class="food-card"><img src="veg_burger.jpg" class="food-photo"><div class="food-info"><p class="food-name">Veg Burger</p><p class="food-price">₹80</p></div></div>
-                <div class="food-card"><img src="egg_burger.jpg" class="food-photo"><div class="food-info"><p class="food-name">Egg Burger</p><p class="food-price">₹90</p></div></div>
-                <div class="food-card"><img src="paneer_burger.jpg" class="food-photo"><div class="food-info"><p class="food-name">Paneer Burger</p><p class="food-price">₹110</p></div></div>
-                <div class="food-card"><img src="aloo_tikki.jpg" class="food-photo"><div class="food-info"><p class="food-name">Aloo Tikki Burger</p><p class="food-price">₹70</p></div></div>
-
-                <div class="category-title">Desserts & Cakes</div>
-                <div class="food-card"><img src="choco_lava.jpg" class="food-photo"><div class="food-info"><p class="food-name">Choco Lava Cake</p><p class="food-price">₹60</p></div></div>
-                <div class="food-card"><img src="donut.jpg" class="food-photo"><div class="food-info"><p class="food-name">Chocolate Donut</p><p class="food-price">₹50</p></div></div>
-                <div class="food-card"><img src="red_velvet.jpg" class="food-photo"><div class="food-info"><p class="food-name">Red Velvet Pastry</p><p class="food-price">₹90</p></div></div>
-                <div class="food-card"><img src="butterscotch.jpg" class="food-photo"><div class="food-info"><p class="food-name">Butterscotch Pastry</p><p class="food-price">₹75</p></div></div>
-                <div class="food-card"><img src="cream_bun.jpg" class="food-photo"><div class="food-info"><p class="food-name">Cream Bun</p><p class="food-price">₹25</p></div></div>
-
-                <div class="category-title">Cold Drinks & Hot Sips</div>
-                <div class="food-card"><img src="mountain_dew.jpg" class="food-photo"><div class="food-info"><p class="food-name">Mountain Dew</p><p class="food-price">₹40</p></div></div>
-                <div class="food-card"><img src="pepsi.jpg" class="food-photo"><div class="food-info"><p class="food-name">Pepsi</p><p class="food-price">₹40</p></div></div>
-                <div class="food-card"><img src="frooti.jpg" class="food-photo"><div class="food-info"><p class="food-name">Frooti</p><p class="food-price">₹20</p></div></div>
-                <div class="food-card"><img src="coffee.jpg" class="food-photo"><div class="food-info"><p class="food-name">Coffee</p><p class="food-price">₹30</p></div></div>
+                <!-- PUFFS & SAVORIES -->
+                    <div class="category-title">Puffs & Savories</div>
+                    
+                    <div class="food-card" data-name="Veg Puff">
+                        <img src="items/veg_puff.jpg" class="food-photo">
+                        <div class="food-info">
+                            <p class="food-name">Veg Puff</p>
+                            <p class="food-price">₹20</p>
+                        </div>
+                    </div>
+                    
+                    <div class="food-card" data-name="Egg Puff">
+                        <img src="items/egg_puff.jpg" class="food-photo">
+                        <div class="food-info">
+                            <p class="food-name">Egg Puff</p>
+                            <p class="food-price">₹25</p>
+                        </div>
+                    </div>
+                    
+                    <div class="food-card" data-name="Paneer Puff">
+                        <img src="items/paneer_puff.jpg" class="food-photo">
+                        <div class="food-info">
+                            <p class="food-name">Paneer Puff</p>
+                            <p class="food-price">₹35</p>
+                        </div>
+                    </div>
+                    
+                    <div class="food-card" data-name="Cheese Puff">
+                        <img src="items/cheese_puff.jpg" class="food-photo">
+                        <div class="food-info">
+                            <p class="food-name">Cheese Puff</p>
+                            <p class="food-price">₹40</p>
+                        </div>
+                    </div>
+                    
+                    <div class="food-card" data-name="Bingo Chips">
+                        <img src="items/bingo.jpg" class="food-photo">
+                        <div class="food-info">
+                            <p class="food-name">Bingo Chips</p>
+                            <p class="food-price">₹20</p>
+                        </div>
+                    </div>
+                    
+                    
+                    <!-- BURGERS -->
+                    <div class="category-title">Burgers</div>
+                    
+                    <div class="food-card" data-name="Veg Burger">
+                        <img src="items/veg_burger.jpg" class="food-photo">
+                        <div class="food-info">
+                            <p class="food-name">Veg Burger</p>
+                            <p class="food-price">₹80</p>
+                        </div>
+                    </div>
+                    
+                    <div class="food-card" data-name="Egg Burger">
+                        <img src="items/egg_burger.jpg" class="food-photo">
+                        <div class="food-info">
+                            <p class="food-name">Egg Burger</p>
+                            <p class="food-price">₹90</p>
+                        </div>
+                    </div>
+                    
+                    <div class="food-card" data-name="Paneer Burger">
+                        <img src="items/paneer_burger.jpg" class="food-photo">
+                        <div class="food-info">
+                            <p class="food-name">Paneer Burger</p>
+                            <p class="food-price">₹110</p>
+                        </div>
+                    </div>
+                    
+                    <div class="food-card" data-name="Aloo Tikki Burger">
+                        <img src="items/aloo_tikki.jpg" class="food-photo">
+                        <div class="food-info">
+                            <p class="food-name">Aloo Tikki Burger</p>
+                            <p class="food-price">₹70</p>
+                        </div>
+                    </div>
+                    
+                    
+                    <!-- DESSERTS & CAKES -->
+                    <div class="category-title">Desserts & Cakes</div>
+                    
+                    <div class="food-card" data-name="Choco Lava Cake">
+                        <img src="items/choco_lava.jpg" class="food-photo">
+                        <div class="food-info">
+                            <p class="food-name">Choco Lava Cake</p>
+                            <p class="food-price">₹60</p>
+                        </div>
+                    </div>
+                    
+                    <div class="food-card" data-name="Chocolate Donut">
+                        <img src="items/donut.jpg" class="food-photo">
+                        <div class="food-info">
+                            <p class="food-name">Chocolate Donut</p>
+                            <p class="food-price">₹50</p>
+                        </div>
+                    </div>
+                    
+                    <div class="food-card" data-name="Red Velvet Pastry">
+                        <img src="items/red_velvet.jpg" class="food-photo">
+                        <div class="food-info">
+                            <p class="food-name">Red Velvet Pastry</p>
+                            <p class="food-price">₹90</p>
+                        </div>
+                    </div>
+                    
+                    <div class="food-card" data-name="Butterscotch Pastry">
+                        <img src="items/butterscotch.jpg" class="food-photo">
+                        <div class="food-info">
+                            <p class="food-name">Butterscotch Pastry</p>
+                            <p class="food-price">₹75</p>
+                        </div>
+                    </div>
+                    
+                    <div class="food-card" data-name="Cream Bun">
+                        <img src="items/cream_bun.jpg" class="food-photo">
+                        <div class="food-info">
+                            <p class="food-name">Cream Bun</p>
+                            <p class="food-price">₹25</p>
+                        </div>
+                    </div>
+                    
+                    
+                    <!-- COLD DRINKS & HOT SIPS -->
+                    <div class="category-title">Cold Drinks & Hot Sips</div>
+                    
+                    <div class="food-card" data-name="Mountain Dew">
+                        <img src="items/mountain_dew.jpg" class="food-photo">
+                        <div class="food-info">
+                            <p class="food-name">Mountain Dew</p>
+                            <p class="food-price">₹40</p>
+                        </div>
+                    </div>
+                    
+                    <div class="food-card" data-name="Pepsi">
+                        <img src="items/pepsi.jpg" class="food-photo">
+                        <div class="food-info">
+                            <p class="food-name">Pepsi</p>
+                            <p class="food-price">₹40</p>
+                        </div>
+                    </div>
+                    
+                    <div class="food-card" data-name="Frooti">
+                        <img src="items/frooti.jpg" class="food-photo">
+                        <div class="food-info">
+                            <p class="food-name">Frooti</p>
+                            <p class="food-price">₹20</p>
+                        </div>
+                    </div>
+                    
+                    <div class="food-card" data-name="Coffee">
+                        <img src="items/coffee.jpg" class="food-photo">
+                        <div class="food-info">
+                            <p class="food-name">Coffee</p>
+                            <p class="food-price">₹30</p>
+                        </div>
+                    </div>
+                                </div>
+                            </div>
+                    
+                            <div class="info-card">
+                                <p class="card-heading">⭐ Student Reviews</p>
+                                <div class="review-box">
+                                    <p style="color: #ffa000;">★★★★★</p>
+                                    <p>"Best pastries in Warangal. Their Red Velvet is a must-try!"</p>
+                                    <p style="font-weight: 700; color: #800000;">- Rahul (3rd Year)</p>
+                                </div>
+                            </div>
 
             </div>
-        </div>
-
-        <div class="info-card">
-            <p class="card-heading">⭐ Student Reviews</p>
-            <div class="review-box">
-                <p style="color: #ffa000;">★★★★★</p>
-                <p>"Best pastries in Warangal. Their Red Velvet is a must-try!"</p>
-                <p style="font-weight: 700; color: #800000;">- Rahul (3rd Year)</p>
-            </div>
-        </div>
-
-    </div>
-
-</body>
+            <script src="countryoven.js"></script>
+    </body>
 </html>
