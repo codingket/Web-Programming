@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Amul Ice Cream | NITW</title>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap"
+        rel="stylesheet">
+
     <style>
         body {
             margin: 0;
@@ -51,7 +53,7 @@
             padding: 40px;
             border-radius: 25px;
             margin-bottom: 30px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
             text-align: left;
         }
 
@@ -97,7 +99,7 @@
 
         .food-card:hover {
             transform: translateY(-6px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
         }
 
         .food-photo {
@@ -160,44 +162,149 @@
         <div class="info-card">
             <p class="location-tag">📍 SAC Area, NIT Warangal</p>
             <p style="color:#444;">
-                The go-to spot for chilled treats, milkshakes, and late-night desserts. Perfect for beating the Warangal heat.
+                The go-to spot for chilled treats, milkshakes, and late-night desserts. Perfect for beating the Warangal
+                heat.
             </p>
         </div>
 
         <!-- MENU -->
         <div class="info-card">
+
+            <!-- 🔍 SEARCH BAR -->
+            <input type="text" id="menuSearch" placeholder="Search items..."
+                style="padding:10px; width:300px; border-radius:10px; border:1px solid #ccc; margin-bottom:20px;">
+
             <p class="card-heading">🍦 Ice Cream Menu</p>
 
             <div class="menu-grid">
 
                 <!-- SCOOPS -->
+                <!-- SCOOPS -->
                 <div class="category-title">Scoops</div>
-                <div class="food-card"><img src="vanilla.jpg" class="food-photo"><div class="food-info"><p class="food-name">Vanilla</p><p class="food-price">₹30</p></div></div>
-                <div class="food-card"><img src="chocolate.jpg" class="food-photo"><div class="food-info"><p class="food-name">Chocolate</p><p class="food-price">₹30</p></div></div>
-                <div class="food-card"><img src="strawberry.jpg" class="food-photo"><div class="food-info"><p class="food-name">Strawberry</p><p class="food-price">₹30</p></div></div>
-                <div class="food-card"><img src="butterscotch.jpg" class="food-photo"><div class="food-info"><p class="food-name">Butterscotch</p><p class="food-price">₹35</p></div></div>
+
+                <div class="food-card" data-name="Vanilla">
+                    <img src="vanilla.jpg" class="food-photo">
+                    <div class="food-info">
+                        <p class="food-name">Vanilla</p>
+                        <p class="food-price">₹30</p>
+                    </div>
+                </div>
+
+                <div class="food-card" data-name="Chocolate">
+                    <img src="chocolate.jpg" class="food-photo">
+                    <div class="food-info">
+                        <p class="food-name">Chocolate</p>
+                        <p class="food-price">₹30</p>
+                    </div>
+                </div>
+
+                <div class="food-card" data-name="Strawberry">
+                    <img src="strawberry.jpg" class="food-photo">
+                    <div class="food-info">
+                        <p class="food-name">Strawberry</p>
+                        <p class="food-price">₹30</p>
+                    </div>
+                </div>
+
+                <div class="food-card" data-name="Butterscotch">
+                    <img src="butterscotch.jpg" class="food-photo">
+                    <div class="food-info">
+                        <p class="food-name">Butterscotch</p>
+                        <p class="food-price">₹35</p>
+                    </div>
+                </div>
 
                 <!-- SUNDAES -->
                 <div class="category-title">Sundaes</div>
-                <div class="food-card"><img src="choco_sundae.jpg" class="food-photo"><div class="food-info"><p class="food-name">Chocolate Sundae</p><p class="food-price">₹80</p></div></div>
-                <div class="food-card"><img src="brownie.jpg" class="food-photo"><div class="food-info"><p class="food-name">Brownie Sundae</p><p class="food-price">₹100</p></div></div>
-                <div class="food-card"><img src="fruit_sundae.jpg" class="food-photo"><div class="food-info"><p class="food-name">Fruit Sundae</p><p class="food-price">₹90</p></div></div>
+
+                <div class="food-card" data-name="Chocolate Sundae">
+                    <img src="choco_sundae.jpg" class="food-photo">
+                    <div class="food-info">
+                        <p class="food-name">Chocolate Sundae</p>
+                        <p class="food-price">₹80</p>
+                    </div>
+                </div>
+
+                <div class="food-card" data-name="Brownie Sundae">
+                    <img src="brownie.jpg" class="food-photo">
+                    <div class="food-info">
+                        <p class="food-name">Brownie Sundae</p>
+                        <p class="food-price">₹100</p>
+                    </div>
+                </div>
+
+                <div class="food-card" data-name="Fruit Sundae">
+                    <img src="fruit_sundae.jpg" class="food-photo">
+                    <div class="food-info">
+                        <p class="food-name">Fruit Sundae</p>
+                        <p class="food-price">₹90</p>
+                    </div>
+                </div>
 
                 <!-- SHAKES -->
                 <div class="category-title">Milkshakes</div>
-                <div class="food-card"><img src="oreo.jpg" class="food-photo"><div class="food-info"><p class="food-name">Oreo Shake</p><p class="food-price">₹110</p></div></div>
-                <div class="food-card"><img src="kitkat.jpg" class="food-photo"><div class="food-info"><p class="food-name">KitKat Shake</p><p class="food-price">₹110</p></div></div>
-                <div class="food-card"><img src="mango.jpg" class="food-photo"><div class="food-info"><p class="food-name">Mango Shake</p><p class="food-price">₹100</p></div></div>
+
+                <div class="food-card" data-name="Oreo Shake">
+                    <img src="oreo.jpg" class="food-photo">
+                    <div class="food-info">
+                        <p class="food-name">Oreo Shake</p>
+                        <p class="food-price">₹110</p>
+                    </div>
+                </div>
+
+                <div class="food-card" data-name="KitKat Shake">
+                    <img src="kitkat.jpg" class="food-photo">
+                    <div class="food-info">
+                        <p class="food-name">KitKat Shake</p>
+                        <p class="food-price">₹110</p>
+                    </div>
+                </div>
+
+                <div class="food-card" data-name="Mango Shake">
+                    <img src="mango.jpg" class="food-photo">
+                    <div class="food-info">
+                        <p class="food-name">Mango Shake</p>
+                        <p class="food-price">₹100</p>
+                    </div>
+                </div>
 
                 <!-- ICE CREAM CUPS -->
                 <div class="category-title">Ice Cream Cups</div>
-                <div class="food-card"><img src="amul_cup.jpg" class="food-photo"><div class="food-info"><p class="food-name">Amul Cup</p><p class="food-price">₹40</p></div></div>
-                <div class="food-card"><img src="rajbhog.jpg" class="food-photo"><div class="food-info"><p class="food-name">Rajbhog Cup</p><p class="food-price">₹50</p></div></div>
 
-                <!-- ADD-ONS -->
+                <div class="food-card" data-name="Amul Cup">
+                    <img src="amul_cup.jpg" class="food-photo">
+                    <div class="food-info">
+                        <p class="food-name">Amul Cup</p>
+                        <p class="food-price">₹40</p>
+                    </div>
+                </div>
+
+                <div class="food-card" data-name="Rajbhog Cup">
+                    <img src="rajbhog.jpg" class="food-photo">
+                    <div class="food-info">
+                        <p class="food-name">Rajbhog Cup</p>
+                        <p class="food-price">₹50</p>
+                    </div>
+                </div>
+
+                <!-- EXTRAS -->
                 <div class="category-title">Extras</div>
-                <div class="food-card"><img src="cone.jpg" class="food-photo"><div class="food-info"><p class="food-name">Cone</p><p class="food-price">₹10</p></div></div>
-                <div class="food-card"><img src="choco_syrup.jpg" class="food-photo"><div class="food-info"><p class="food-name">Chocolate Syrup</p><p class="food-price">₹20</p></div></div>
+
+                <div class="food-card" data-name="Cone">
+                    <img src="cone.jpg" class="food-photo">
+                    <div class="food-info">
+                        <p class="food-name">Cone</p>
+                        <p class="food-price">₹10</p>
+                    </div>
+                </div>
+
+                <div class="food-card" data-name="Chocolate Syrup">
+                    <img src="choco_syrup.jpg" class="food-photo">
+                    <div class="food-info">
+                        <p class="food-name">Chocolate Syrup</p>
+                        <p class="food-price">₹20</p>
+                    </div>
+                </div>
 
             </div>
         </div>
@@ -212,8 +319,10 @@
                 <p class="student-credit">- Sneha (3rd Year)</p>
             </div>
         </div>
+        <script src="amul.js"></script>
 
     </div>
 
 </body>
+
 </html>

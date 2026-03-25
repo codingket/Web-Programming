@@ -234,6 +234,26 @@
 .search-filter select:focus {
     border-color: #7c3aed;
 }
+
+#searchResults {
+    margin-top: 20px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.result-item {
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.result-item:hover {
+    background: #ede9fe;
+}
     </style>
 </head>
 
@@ -299,8 +319,9 @@
         <option value="Library Plaza">Library Plaza</option>
         <option value="Hostel Blocks">Hostel Blocks</option>
     </select>
-
 </div>
+
+<div id="searchResults"></div>
         <div class="stall-list">
             
             <a href="madras.html" class="stall-card"

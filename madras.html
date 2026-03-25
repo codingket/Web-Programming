@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Madras Filter Coffee | NITW</title>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap"
+        rel="stylesheet">
+
     <style>
         body {
             margin: 0;
@@ -42,7 +44,8 @@
 
         /* Container */
         .content-container {
-            width: 1000px; /* Widened to fit 4 cards across */
+            width: 1000px;
+            /* Widened to fit 4 cards across */
             margin: 40px auto;
         }
 
@@ -52,7 +55,7 @@
             padding: 40px;
             border-radius: 25px;
             margin-bottom: 30px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
             text-align: left;
         }
 
@@ -74,12 +77,14 @@
         .menu-grid {
             display: flex;
             flex-wrap: wrap;
-            gap: 25px; /* Increased gap */
+            gap: 25px;
+            /* Increased gap */
         }
 
         /* Category Divider */
         .category-title {
-            width: 100%; /* Spans full width */
+            width: 100%;
+            /* Spans full width */
             color: #3e2723;
             font-size: 18px;
             font-weight: 800;
@@ -95,21 +100,23 @@
             background-color: white;
             border: 1px solid #eee;
             border-radius: 18px;
-            width: 220px; /* Perfect width for 4 cards in 1000px */
+            width: 220px;
+            /* Perfect width for 4 cards in 1000px */
             overflow: hidden;
             transition: 0.3s ease;
         }
 
         .food-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
         }
 
         .food-photo {
             width: 100%;
             height: 140px;
             object-fit: cover;
-            background-color: #ddd; /* Placeholder color */
+            background-color: #ddd;
+            /* Placeholder color */
         }
 
         .food-info {
@@ -156,6 +163,7 @@
         }
     </style>
 </head>
+
 <body>
 
     <div class="navbar">
@@ -167,7 +175,7 @@
     </div>
 
     <div class="content-container">
-        
+
         <div class="info-card">
             <p class="location-tag">📍 Food Court, NIT Warangal</p>
             <p style="line-height: 1.6; color: #444;">
@@ -176,204 +184,309 @@
         </div>
 
         <div class="info-card">
+
+            <!-- SEARCH BAR -->
+            <input type="text" id="menuSearch" placeholder="Search items..."
+                style="padding:10px; width:300px; border-radius:10px; border:1px solid #ccc; margin-bottom:20px;">
+
             <p class="card-heading">☕ Full Menu</p>
-            
+
             <div class="menu-grid">
 
                 <div class="category-title">Coffee</div>
-                
-                <div class="food-card">
-                    <img src="items/coffee_item.jpg" class="food-photo" alt="Coffee">
-                    <div class="food-info"><p class="food-name">Filter Coffee</p><p class="food-price">₹25</p></div>
+
+                <div class="food-card" data-name="Filter Coffee">
+                    <img src="items/coffee_item.jpg" class="food-photo">
+                    <div class="food-info">
+                        <p class="food-name">Filter Coffee</p>
+                        <p class="food-price">₹25</p>
+                    </div>
                 </div>
 
-                <div class="food-card">
-                    <img src="items/premium_coffee.jpg" class="food-photo" alt="Premium Coffee">
-                    <div class="food-info"><p class="food-name">Premium Coffee</p><p class="food-price">₹30</p></div>
+                <div class="food-card" data-name="Premium Coffee">
+                    <img src="items/premium_coffee.jpg" class="food-photo">
+                    <div class="food-info">
+                        <p class="food-name">Premium Coffee</p>
+                        <p class="food-price">₹30</p>
+                    </div>
                 </div>
 
-                <div class="food-card">
-                    <img src="items/bellam_coffee.jpg" class="food-photo" alt="Bellam Coffee">
-                    <div class="food-info"><p class="food-name">Bellam Coffee</p><p class="food-price">₹25</p></div>
+                <div class="food-card" data-name="Bellam Coffee">
+                    <img src="items/bellam_coffee.jpg" class="food-photo">
+                    <div class="food-info">
+                        <p class="food-name">Bellam Coffee</p>
+                        <p class="food-price">₹25</p>
+                    </div>
                 </div>
 
-                <div class="food-card">
-                    <img src="items/sukku_coffee.jpg" class="food-photo" alt="Sukku Coffee">
-                    <div class="food-info"><p class="food-name">Sukku Coffee</p><p class="food-price">₹20</p></div>
+                <div class="food-card" data-name="Sukku Coffee">
+                    <img src="items/sukku_coffee.jpg" class="food-photo">
+                    <div class="food-info">
+                        <p class="food-name">Sukku Coffee</p>
+                        <p class="food-price">₹20</p>
+                    </div>
                 </div>
 
-                <div class="food-card">
-                    <img src="items/black_coffee.jpg" class="food-photo" alt="Black Coffee">
-                    <div class="food-info"><p class="food-name">Black Coffee</p><p class="food-price">₹20</p></div>
+                <div class="food-card" data-name="Black Coffee">
+                    <img src="items/black_coffee.jpg" class="food-photo">
+                    <div class="food-info">
+                        <p class="food-name">Black Coffee</p>
+                        <p class="food-price">₹20</p>
+                    </div>
                 </div>
 
                 <div class="category-title">Tea</div>
 
-                <div class="food-card">
-                    <img src="items/spl_tea.jpg" class="food-photo" alt="Tea">
-                    <div class="food-info"><p class="food-name">Sp. Tea</p><p class="food-price">₹15</p></div>
+                <div class="food-card" data-name="Sp Tea">
+                    <img src="items/spl_tea.jpg" class="food-photo">
+                    <div class="food-info">
+                        <p class="food-name">Sp. Tea</p>
+                        <p class="food-price">₹15</p>
+                    </div>
                 </div>
 
-                <div class="food-card">
-                    <img src="items/bellam_tea.jpg" class="food-photo" alt="Bellam Tea">
-                    <div class="food-info"><p class="food-name">Bellam Tea</p><p class="food-price">₹20</p></div>
+                <div class="food-card" data-name="Bellam Tea">
+                    <img src="items/bellam_tea.jpg" class="food-photo">
+                    <div class="food-info">
+                        <p class="food-name">Bellam Tea</p>
+                        <p class="food-price">₹20</p>
+                    </div>
                 </div>
 
-                <div class="food-card">
-                    <img src="items/lemon_tea.jpg" class="food-photo" alt="Lemon Tea">
-                    <div class="food-info"><p class="food-name">Lemon Tea</p><p class="food-price">₹20</p></div>
+                <div class="food-card" data-name="Lemon Tea">
+                    <img src="items/lemon_tea.jpg" class="food-photo">
+                    <div class="food-info">
+                        <p class="food-name">Lemon Tea</p>
+                        <p class="food-price">₹20</p>
+                    </div>
                 </div>
 
-                <div class="food-card">
-                    <img src="items/green_tea.jpg" class="food-photo" alt="Green Tea">
-                    <div class="food-info"><p class="food-name">Green Tea</p><p class="food-price">₹20</p></div>
+                <div class="food-card" data-name="Green Tea">
+                    <img src="items/green_tea.jpg" class="food-photo">
+                    <div class="food-info">
+                        <p class="food-name">Green Tea</p>
+                        <p class="food-price">₹20</p>
+                    </div>
                 </div>
 
-                <div class="food-card">
-                    <img src="items/black_tea.jpg" class="food-photo" alt="Black Tea">
-                    <div class="food-info"><p class="food-name">Black Tea</p><p class="food-price">₹20</p></div>
+                <div class="food-card" data-name="Black Tea">
+                    <img src="items/black_tea.jpg" class="food-photo">
+                    <div class="food-info">
+                        <p class="food-name">Black Tea</p>
+                        <p class="food-price">₹20</p>
+                    </div>
                 </div>
 
                 <div class="category-title">Milk</div>
 
-                <div class="food-card">
-                    <img src="items/milk.jpg" class="food-photo" alt="Milk">
-                    <div class="food-info"><p class="food-name">Hot Milk</p><p class="food-price">₹15</p></div>
+                <div class="food-card" data-name="Hot Milk">
+                    <img src="items/milk.jpg" class="food-photo">
+                    <div class="food-info">
+                        <p class="food-name">Hot Milk</p>
+                        <p class="food-price">₹15</p>
+                    </div>
                 </div>
 
-                <div class="food-card">
-                    <img src="items/boost.jpg" class="food-photo" alt="Boost">
-                    <div class="food-info"><p class="food-name">Boost</p><p class="food-price">₹25</p></div>
+                <div class="food-card" data-name="Boost">
+                    <img src="items/boost.jpg" class="food-photo">
+                    <div class="food-info">
+                        <p class="food-name">Boost</p>
+                        <p class="food-price">₹25</p>
+                    </div>
                 </div>
 
-                <div class="food-card">
-                    <img src="items/horlicks.jpg" class="food-photo" alt="Horlicks">
-                    <div class="food-info"><p class="food-name">Horlicks</p><p class="food-price">₹25</p></div>
+                <div class="food-card" data-name="Horlicks">
+                    <img src="items/horlicks.jpg" class="food-photo">
+                    <div class="food-info">
+                        <p class="food-name">Horlicks</p>
+                        <p class="food-price">₹25</p>
+                    </div>
                 </div>
 
-                <div class="food-card">
-                    <img src="items/badam_milk.jpg" class="food-photo" alt="Badam Milk">
-                    <div class="food-info"><p class="food-name">Badam Milk</p><p class="food-price">₹20</p></div>
+                <div class="food-card" data-name="Badam Milk">
+                    <img src="items/badam_milk.jpg" class="food-photo">
+                    <div class="food-info">
+                        <p class="food-name">Badam Milk</p>
+                        <p class="food-price">₹20</p>
+                    </div>
                 </div>
 
-                <div class="food-card">
-                    <img src="items/chocolate_hot.jpg" class="food-photo" alt="Hot Chocolate">
-                    <div class="food-info"><p class="food-name">Hot Chocolate</p><p class="food-price">₹40</p></div>
+                <div class="food-card" data-name="Hot Chocolate">
+                    <img src="items/chocolate_hot.jpg" class="food-photo">
+                    <div class="food-info">
+                        <p class="food-name">Hot Chocolate</p>
+                        <p class="food-price">₹40</p>
+                    </div>
                 </div>
 
                 <div class="category-title">Lassi</div>
 
-                <div class="food-card">
-                    <img src="items/plain_lassi.jpg" class="food-photo" alt="Lassi">
-                    <div class="food-info"><p class="food-name">Plain Lassi</p><p class="food-price">₹50</p></div>
+                <div class="food-card" data-name="Plain Lassi">
+                    <img src="items/plain_lassi.jpg" class="food-photo">
+                    <div class="food-info">
+                        <p class="food-name">Plain Lassi</p>
+                        <p class="food-price">₹50</p>
+                    </div>
                 </div>
 
-                <div class="food-card">
-                    <img src="items/mango_lassi.jpg" class="food-photo" alt="Mango Lassi">
-                    <div class="food-info"><p class="food-name">Mango Lassi</p><p class="food-price">₹60</p></div>
+                <div class="food-card" data-name="Mango Lassi">
+                    <img src="items/mango_lassi.jpg" class="food-photo">
+                    <div class="food-info">
+                        <p class="food-name">Mango Lassi</p>
+                        <p class="food-price">₹60</p>
+                    </div>
                 </div>
 
-                <div class="food-card">
-                    <img src="items/pineapple_lassi.jpg" class="food-photo" alt="Pineapple Lassi">
-                    <div class="food-info"><p class="food-name">Pineapple Lassi</p><p class="food-price">₹60</p></div>
+                <div class="food-card" data-name="Pineapple Lassi">
+                    <img src="items/pineapple_lassi.jpg" class="food-photo">
+                    <div class="food-info">
+                        <p class="food-name">Pineapple Lassi</p>
+                        <p class="food-price">₹60</p>
+                    </div>
                 </div>
 
                 <div class="category-title">Cold Coffee</div>
 
-                <div class="food-card">
-                    <img src="items/cold_coffee.jpg" class="food-photo" alt="Cold Coffee">
-                    <div class="food-info"><p class="food-name">Cold Coffee</p><p class="food-price">₹100</p></div>
+                <div class="food-card" data-name="Cold Coffee">
+                    <img src="items/cold_coffee.jpg" class="food-photo">
+                    <div class="food-info">
+                        <p class="food-name">Cold Coffee</p>
+                        <p class="food-price">₹100</p>
+                    </div>
                 </div>
 
-                <div class="food-card">
-                    <img src="items/hazelnut_coffee.jpg" class="food-photo" alt="Hazelnut Coffee">
-                    <div class="food-info"><p class="food-name">Hazelnut Coffee</p><p class="food-price">₹120</p></div>
+                <div class="food-card" data-name="Hazelnut Coffee">
+                    <img src="items/hazelnut_coffee.jpg" class="food-photo">
+                    <div class="food-info">
+                        <p class="food-name">Hazelnut Coffee</p>
+                        <p class="food-price">₹120</p>
+                    </div>
                 </div>
 
-                <div class="food-card">
-                    <img src="items/irish_coffee.jpg" class="food-photo" alt="Irish Coffee">
-                    <div class="food-info"><p class="food-name">Irish Coffee</p><p class="food-price">₹120</p></div>
+                <div class="food-card" data-name="Irish Coffee">
+                    <img src="items/irish_coffee.jpg" class="food-photo">
+                    <div class="food-info">
+                        <p class="food-name">Irish Coffee</p>
+                        <p class="food-price">₹120</p>
+                    </div>
                 </div>
 
                 <div class="category-title">Shakes</div>
 
-                <div class="food-card">
-                    <img src="items/oreo.jpg" class="food-photo" alt="Oreo Shake">
-                    <div class="food-info"><p class="food-name">Oreo Milkshake</p><p class="food-price">₹110</p></div>
+                <div class="food-card" data-name="Oreo Milkshake">
+                    <img src="items/oreo.jpg" class="food-photo">
+                    <div class="food-info">
+                        <p class="food-name">Oreo Milkshake</p>
+                        <p class="food-price">₹110</p>
+                    </div>
                 </div>
 
-                <div class="food-card">
-                    <img src="items/kitkat.jpg" class="food-photo" alt="Kitkat Shake">
-                    <div class="food-info"><p class="food-name">Kit Kat Milkshake</p><p class="food-price">₹110</p></div>
+                <div class="food-card" data-name="Kit Kat Milkshake">
+                    <img src="items/kitkat.jpg" class="food-photo">
+                    <div class="food-info">
+                        <p class="food-name">Kit Kat Milkshake</p>
+                        <p class="food-price">₹110</p>
+                    </div>
                 </div>
 
-                <div class="food-card">
-                    <img src="items/mango_shake.jpg" class="food-photo" alt="Mango Shake">
-                    <div class="food-info"><p class="food-name">Mango Milkshake</p><p class="food-price">₹100</p></div>
+                <div class="food-card" data-name="Mango Milkshake">
+                    <img src="items/mango_shake.jpg" class="food-photo">
+                    <div class="food-info">
+                        <p class="food-name">Mango Milkshake</p>
+                        <p class="food-price">₹100</p>
+                    </div>
                 </div>
 
-                <div class="food-card">
-                    <img src="items/vanilla_shake.jpg" class="food-photo" alt="Vanilla Shake">
-                    <div class="food-info"><p class="food-name">Vanilla Milkshake</p><p class="food-price">₹100</p></div>
+                <div class="food-card" data-name="Vanilla Milkshake">
+                    <img src="items/vanilla_shake.jpg" class="food-photo">
+                    <div class="food-info">
+                        <p class="food-name">Vanilla Milkshake</p>
+                        <p class="food-price">₹100</p>
+                    </div>
                 </div>
 
                 <div class="category-title">Mojito</div>
 
-                <div class="food-card">
-                    <img src="items/mint_mojito.jpg" class="food-photo" alt="Mint Mojito">
-                    <div class="food-info"><p class="food-name">Mint Mojito</p><p class="food-price">₹60</p></div>
+                <div class="food-card" data-name="Mint Mojito">
+                    <img src="items/mint_mojito.jpg" class="food-photo">
+                    <div class="food-info">
+                        <p class="food-name">Mint Mojito</p>
+                        <p class="food-price">₹60</p>
+                    </div>
                 </div>
 
-                <div class="food-card">
-                    <img src="items/kiwi_mojito.jpg" class="food-photo" alt="Kiwi Mojito">
-                    <div class="food-info"><p class="food-name">Kiwi Mojito</p><p class="food-price">₹60</p></div>
+                <div class="food-card" data-name="Kiwi Mojito">
+                    <img src="items/kiwi_mojito.jpg" class="food-photo">
+                    <div class="food-info">
+                        <p class="food-name">Kiwi Mojito</p>
+                        <p class="food-price">₹60</p>
+                    </div>
                 </div>
 
-                <div class="food-card">
-                    <img src="items/lemonade.jpg" class="food-photo" alt="Masala Lemonade">
-                    <div class="food-info"><p class="food-name">Masala Lemonade</p><p class="food-price">₹60</p></div>
+                <div class="food-card" data-name="Masala Lemonade">
+                    <img src="items/lemonade.jpg" class="food-photo">
+                    <div class="food-info">
+                        <p class="food-name">Masala Lemonade</p>
+                        <p class="food-price">₹60</p>
+                    </div>
                 </div>
+
                 <div class="category-title">Snacks</div>
 
-                <div class="food-card">
-                    <img src="items/egg_puff.jpg" class="food-photo" alt="Egg Puff">
-                    <div class="food-info"><p class="food-name">Egg Puff</p><p class="food-price">₹20</p></div>
+                <div class="food-card" data-name="Egg Puff">
+                    <img src="items/egg_puff.jpg" class="food-photo">
+                    <div class="food-info">
+                        <p class="food-name">Egg Puff</p>
+                        <p class="food-price">₹20</p>
+                    </div>
                 </div>
 
-                <div class="food-card">
-                    <img src="items/veg_puff.jpg" class="food-photo" alt="Veg Puff">
-                    <div class="food-info"><p class="food-name">Veg Puff</p><p class="food-price">₹15</p></div>
+                <div class="food-card" data-name="Veg Puff">
+                    <img src="items/veg_puff.jpg" class="food-photo">
+                    <div class="food-info">
+                        <p class="food-name">Veg Puff</p>
+                        <p class="food-price">₹15</p>
+                    </div>
                 </div>
 
-                <div class="food-card">
-                    <img src="items/samosa.jpg" class="food-photo" alt="Samosa">
-                    <div class="food-info"><p class="food-name">Samosa</p><p class="food-price">₹15</p></div>
+                <div class="food-card" data-name="Samosa">
+                    <img src="items/samosa.jpg" class="food-photo">
+                    <div class="food-info">
+                        <p class="food-name">Samosa</p>
+                        <p class="food-price">₹15</p>
+                    </div>
                 </div>
 
-                <div class="food-card">
-                    <img src="items/cheese_puff.jpg" class="food-photo" alt="Cheese Puff">
-                    <div class="food-info"><p class="food-name">Cheese Puff</p><p class="food-price">₹30</p></div>
+                <div class="food-card" data-name="Cheese Puff">
+                    <img src="items/cheese_puff.jpg" class="food-photo">
+                    <div class="food-info">
+                        <p class="food-name">Cheese Puff</p>
+                        <p class="food-price">₹30</p>
+                    </div>
                 </div>
 
-                <div class="food-card">
-                    <img src="items/paneer_puff.jpg" class="food-photo" alt="Paneer Puff">
-                    <div class="food-info"><p class="food-name">Paneer Puff</p><p class="food-price">₹25</p></div>
+                <div class="food-card" data-name="Paneer Puff">
+                    <img src="items/paneer_puff.jpg" class="food-photo">
+                    <div class="food-info">
+                        <p class="food-name">Paneer Puff</p>
+                        <p class="food-price">₹25</p>
+                    </div>
                 </div>
-
             </div>
-        </div>
 
-        <div class="info-card">
-            <p class="card-heading">⭐ Student Reviews</p>
-            
-            <div class="review-box">
-                <p class="stars">★★★★★</p>
-                <p class="review-text">"Best filter coffee on campus."</p>
-                <p class="student-credit">- Arjun (2nd Year B.Tech)</p>
+            <div class="info-card">
+                <p class="card-heading">⭐ Student Reviews</p>
+
+                <div class="review-box">
+                    <p class="stars">★★★★★</p>
+                    <p class="review-text">"Best filter coffee on campus."</p>
+                    <p class="student-credit">- Arjun (2nd Year B.Tech)</p>
+                </div>
             </div>
-        </div>
 
-    </div>
+        </div>
+        <script src="madras.js"></script>
 
 </body>
+
 </html>

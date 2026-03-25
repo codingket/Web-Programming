@@ -30,3 +30,46 @@ function filterCards() {
 searchInput.addEventListener("input", filterCards);
 categoryFilter.addEventListener("change", filterCards);
 locationFilter.addEventListener("change", filterCards);
+
+
+const items = [
+    { name: "Filter Coffee", stall: "Madras Filter Coffee", link: "madras.html" },
+    { name: "Premium Coffee", stall: "Madras Filter Coffee", link: "madras.html" },
+    { name: "Cold Coffee", stall: "Madras Filter Coffee", link: "madras.html" },
+    { name: "Oreo Milkshake", stall: "Madras Filter Coffee", link: "madras.html" },
+    { name: "Samosa", stall: "Madras Filter Coffee", link: "madras.html" },
+
+    { name: "Ice Cream", stall: "Amul Ice Cream", link: "amul.html" },
+    { name: "Pizza", stall: "Dominos Pizza", link: "dominos.html" },
+    { name: "Coffee", stall: "Nescafe", link: "nescafe.html" }
+];
+
+const resultsContainer = document.getElementById("searchResults");
+
+searchInput.addEventListener("input", function () {
+    const query = searchInput.value.toLowerCase();
+    resultsContainer.innerHTML = "";
+
+    if (query === "") return;
+
+    const filtered = items.filter(item =>
+        item.name.toLowerCase().includes(query)
+    );
+
+    if (filtered.length === 0) {
+        resultsContainer.innerHTML = "<p>No items found</p>";
+        return;
+    }
+
+    filtered.forEach(item => {
+        const div = document.createElement("div");
+        div.classList.add("result-item");
+        div.innerHTML = `<strong>${item.name}</strong> - ${item.stall}`;
+
+        div.onclick = () => {
+            window.location.href = item.link;
+        };
+
+        resultsContainer.appendChild(div);
+    });
+});
