@@ -102,52 +102,209 @@
 
         <div class="info-card">
             <p class="card-heading">🍕 Pizza Menu</p>
+
+            <!-- SEARCH BAR -->
+            <input type="text" id="menuSearch" placeholder="Search items..."
+                style="padding:10px; width:300px; border-radius:10px; border:1px solid #ccc; margin-bottom:20px;">
             
             <div class="menu-grid">
 
-    <!-- VEG PIZZAS -->
-    <div class="category-title">Veg Pizzas</div>
-
-    <div class="food-card"><img src="margherita.jpg" class="food-photo"><div class="food-info"><p class="food-name">Margherita</p><p class="food-price">₹109</p></div></div>
-    <div class="food-card"><img src="farmhouse.jpg" class="food-photo"><div class="food-info"><p class="food-name">Farmhouse</p><p class="food-price">₹259</p></div></div>
-    <div class="food-card"><img src="peppy_paneer.jpg" class="food-photo"><div class="food-info"><p class="food-name">Peppy Paneer</p><p class="food-price">₹259</p></div></div>
-    <div class="food-card"><img src="veg_extravaganza.jpg" class="food-photo"><div class="food-info"><p class="food-name">Veg Extravaganza</p><p class="food-price">₹299</p></div></div>
-    <div class="food-card"><img src="deluxe_veggie.jpg" class="food-photo"><div class="food-info"><p class="food-name">Deluxe Veggie</p><p class="food-price">₹279</p></div></div>
-    <div class="food-card"><img src="cheese_n_corn.jpg" class="food-photo"><div class="food-info"><p class="food-name">Cheese & Corn</p><p class="food-price">₹199</p></div></div>
-
-    <!-- NON VEG -->
-    <div class="category-title">Non-Veg Pizzas</div>
-
-    <div class="food-card"><img src="chicken_sausage.jpg" class="food-photo"><div class="food-info"><p class="food-name">Chicken Sausage</p><p class="food-price">₹199</p></div></div>
-    <div class="food-card"><img src="chicken_golden_delight.jpg" class="food-photo"><div class="food-info"><p class="food-name">Chicken Golden Delight</p><p class="food-price">₹309</p></div></div>
-    <div class="food-card"><img src="chicken_dominator.jpg" class="food-photo"><div class="food-info"><p class="food-name">Chicken Dominator</p><p class="food-price">₹359</p></div></div>
-    <div class="food-card"><img src="pepper_barbecue.jpg" class="food-photo"><div class="food-info"><p class="food-name">Pepper Barbecue Chicken</p><p class="food-price">₹329</p></div></div>
-    <div class="food-card"><img src="chicken_fiesta.jpg" class="food-photo"><div class="food-info"><p class="food-name">Chicken Fiesta</p><p class="food-price">₹299</p></div></div>
-
-    <!-- PIZZA MANIA -->
-    <div class="category-title">Pizza Mania</div>
-
-    <div class="food-card"><img src="tomato.jpg" class="food-photo"><div class="food-info"><p class="food-name">Tomato</p><p class="food-price">₹59</p></div></div>
-    <div class="food-card"><img src="onion.jpg" class="food-photo"><div class="food-info"><p class="food-name">Onion</p><p class="food-price">₹69</p></div></div>
-    <div class="food-card"><img src="golden_corn.jpg" class="food-photo"><div class="food-info"><p class="food-name">Golden Corn</p><p class="food-price">₹89</p></div></div>
-    <div class="food-card"><img src="paneer_capsicum.jpg" class="food-photo"><div class="food-info"><p class="food-name">Paneer & Capsicum</p><p class="food-price">₹129</p></div></div>
-    <div class="food-card"><img src="cheese_tomato.jpg" class="food-photo"><div class="food-info"><p class="food-name">Cheese & Tomato</p><p class="food-price">₹109</p></div></div>
-
-    <!-- SPECIALTY -->
-    <div class="category-title">Specialty Pizzas</div>
-
-    <div class="food-card"><img src="double_cheese.jpg" class="food-photo"><div class="food-info"><p class="food-name">Double Cheese Burst</p><p class="food-price">₹349</p></div></div>
-    <div class="food-card"><img src="mexican_green_wave.jpg" class="food-photo"><div class="food-info"><p class="food-name">Mexican Green Wave</p><p class="food-price">₹299</p></div></div>
-    <div class="food-card"><img src="indian_tandoori.jpg" class="food-photo"><div class="food-info"><p class="food-name">Indian Tandoori Paneer</p><p class="food-price">₹319</p></div></div>
-
-    <!-- PARATHA PIZZA -->
-    <div class="category-title">Paratha Pizza</div>
-
-    <div class="food-card"><img src="corn_paratha.jpg" class="food-photo"><div class="food-info"><p class="food-name">Corn & Cheese Paratha Pizza</p><p class="food-price">₹179</p></div></div>
-    <div class="food-card"><img src="paneer_paratha.jpg" class="food-photo"><div class="food-info"><p class="food-name">Paneer Paratha Pizza</p><p class="food-price">₹209</p></div></div>
-    <div class="food-card"><img src="chicken_keema_paratha.jpg" class="food-photo"><div class="food-info"><p class="food-name">Chicken Keema Paratha Pizza</p><p class="food-price">₹249</p></div></div>
-
-</div>
+                <!-- VEG PIZZAS -->
+            <div class="category-title">Veg Pizzas</div>
+            
+            <div class="food-card" data-name="Margherita">
+                <img src="items/margherita.jpg" class="food-photo">
+                <div class="food-info">
+                    <p class="food-name">Margherita</p>
+                    <p class="food-price">₹109</p>
+                </div>
+            </div>
+            
+            <div class="food-card" data-name="Farmhouse">
+                <img src="items/farmhouse.jpg" class="food-photo">
+                <div class="food-info">
+                    <p class="food-name">Farmhouse</p>
+                    <p class="food-price">₹259</p>
+                </div>
+            </div>
+            
+            <div class="food-card" data-name="Peppy Paneer">
+                <img src="items/peppy_paneer.jpg" class="food-photo">
+                <div class="food-info">
+                    <p class="food-name">Peppy Paneer</p>
+                    <p class="food-price">₹259</p>
+                </div>
+            </div>
+            
+            <div class="food-card" data-name="Veg Extravaganza">
+                <img src="items/veg_extravaganza.jpg" class="food-photo">
+                <div class="food-info">
+                    <p class="food-name">Veg Extravaganza</p>
+                    <p class="food-price">₹299</p>
+                </div>
+            </div>
+            
+            <div class="food-card" data-name="Deluxe Veggie">
+                <img src="items/deluxe_veggie.jpg" class="food-photo">
+                <div class="food-info">
+                    <p class="food-name">Deluxe Veggie</p>
+                    <p class="food-price">₹279</p>
+                </div>
+            </div>
+            
+            <div class="food-card" data-name="Cheese & Corn">
+                <img src="items/cheese_n_corn.jpg" class="food-photo">
+                <div class="food-info">
+                    <p class="food-name">Cheese & Corn</p>
+                    <p class="food-price">₹199</p>
+                </div>
+            </div>
+            
+            
+            <!-- NON-VEG PIZZAS -->
+            <div class="category-title">Non-Veg Pizzas</div>
+            
+            <div class="food-card" data-name="Chicken Sausage">
+                <img src="items/chicken_sausage.jpg" class="food-photo">
+                <div class="food-info">
+                    <p class="food-name">Chicken Sausage</p>
+                    <p class="food-price">₹199</p>
+                </div>
+            </div>
+            
+            <div class="food-card" data-name="Chicken Golden Delight">
+                <img src="items/chicken_golden_delight.jpg" class="food-photo">
+                <div class="food-info">
+                    <p class="food-name">Chicken Golden Delight</p>
+                    <p class="food-price">₹309</p>
+                </div>
+            </div>
+            
+            <div class="food-card" data-name="Chicken Dominator">
+                <img src="items/chicken_dominator.jpg" class="food-photo">
+                <div class="food-info">
+                    <p class="food-name">Chicken Dominator</p>
+                    <p class="food-price">₹359</p>
+                </div>
+            </div>
+            
+            <div class="food-card" data-name="Pepper Barbecue Chicken">
+                <img src="items/pepper_barbecue.jpg" class="food-photo">
+                <div class="food-info">
+                    <p class="food-name">Pepper Barbecue Chicken</p>
+                    <p class="food-price">₹329</p>
+                </div>
+            </div>
+            
+            <div class="food-card" data-name="Chicken Fiesta">
+                <img src="items/chicken_fiesta.jpg" class="food-photo">
+                <div class="food-info">
+                    <p class="food-name">Chicken Fiesta</p>
+                    <p class="food-price">₹299</p>
+                </div>
+            </div>
+            
+            
+            <!-- PIZZA MANIA -->
+            <div class="category-title">Pizza Mania</div>
+            
+            <div class="food-card" data-name="Tomato">
+                <img src="items/tomato.jpg" class="food-photo">
+                <div class="food-info">
+                    <p class="food-name">Tomato</p>
+                    <p class="food-price">₹59</p>
+                </div>
+            </div>
+            
+            <div class="food-card" data-name="Onion">
+                <img src="items/onion.jpg" class="food-photo">
+                <div class="food-info">
+                    <p class="food-name">Onion</p>
+                    <p class="food-price">₹69</p>
+                </div>
+            </div>
+            
+            <div class="food-card" data-name="Golden Corn">
+                <img src="items/golden_corn.jpg" class="food-photo">
+                <div class="food-info">
+                    <p class="food-name">Golden Corn</p>
+                    <p class="food-price">₹89</p>
+                </div>
+            </div>
+            
+            <div class="food-card" data-name="Paneer & Capsicum">
+                <img src="items/paneer_capsicum.jpg" class="food-photo">
+                <div class="food-info">
+                    <p class="food-name">Paneer & Capsicum</p>
+                    <p class="food-price">₹129</p>
+                </div>
+            </div>
+            
+            <div class="food-card" data-name="Cheese & Tomato">
+                <img src="items/cheese_tomato.jpg" class="food-photo">
+                <div class="food-info">
+                    <p class="food-name">Cheese & Tomato</p>
+                    <p class="food-price">₹109</p>
+                </div>
+            </div>
+            
+            
+            <!-- SPECIALTY -->
+            <div class="category-title">Specialty Pizzas</div>
+            
+            <div class="food-card" data-name="Double Cheese Burst">
+                <img src="items/double_cheese.jpg" class="food-photo">
+                <div class="food-info">
+                    <p class="food-name">Double Cheese Burst</p>
+                    <p class="food-price">₹349</p>
+                </div>
+            </div>
+            
+            <div class="food-card" data-name="Mexican Green Wave">
+                <img src="items/mexican_green_wave.jpg" class="food-photo">
+                <div class="food-info">
+                    <p class="food-name">Mexican Green Wave</p>
+                    <p class="food-price">₹299</p>
+                </div>
+            </div>
+            
+            <div class="food-card" data-name="Indian Tandoori Paneer">
+                <img src="items/indian_tandoori.jpg" class="food-photo">
+                <div class="food-info">
+                    <p class="food-name">Indian Tandoori Paneer</p>
+                    <p class="food-price">₹319</p>
+                </div>
+            </div>
+            
+            
+            <!-- PARATHA PIZZA -->
+            <div class="category-title">Paratha Pizza</div>
+            
+            <div class="food-card" data-name="Corn & Cheese Paratha Pizza">
+                <img src="items/corn_paratha.jpg" class="food-photo">
+                <div class="food-info">
+                    <p class="food-name">Corn & Cheese Paratha Pizza</p>
+                    <p class="food-price">₹179</p>
+                </div>
+            </div>
+            
+            <div class="food-card" data-name="Paneer Paratha Pizza">
+                <img src="items/paneer_paratha.jpg" class="food-photo">
+                <div class="food-info">
+                    <p class="food-name">Paneer Paratha Pizza</p>
+                    <p class="food-price">₹209</p>
+                </div>
+            </div>
+            
+            <div class="food-card" data-name="Chicken Keema Paratha Pizza">
+                <img src="items/chicken_keema_paratha.jpg" class="food-photo">
+                <div class="food-info">
+                    <p class="food-name">Chicken Keema Paratha Pizza</p>
+                    <p class="food-price">₹249</p>
+                </div>
+            </div>
+            
+            </div>
         </div>
 
         <div class="info-card">
@@ -161,5 +318,6 @@
 
     </div>
 
+    <script src="dominos.js"></script>
 </body>
 </html>
