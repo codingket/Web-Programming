@@ -168,18 +168,89 @@
    box-shadow: 0 0 0 3px rgba(124,58,237,0.3),
                         0 10px 25px rgba(0,0,0,0.1);
 }
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-right {
+    display: flex;
+    gap: 12px;
+}
+
+/* Login Button */
+.login-btn {
+    background-color: white;
+    color: #7c3aed;
+    padding: 8px 18px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.signup-btn {
+    background-color: #ede9fe;
+    color: #4c1d95;
+    padding: 8px 18px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+
+.signup-btn:hover {
+    background-color: white;
+    transform: scale(1.05);
+}
+.login-btn:hover {
+    background-color: #ede9fe;
+    transform: scale(1.05);
+}
+.search-filter {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+    justify-content: center;
+}
+
+.search-filter input,
+.search-filter select {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    outline: none;
+    font-size: 14px;
+}
+
+.search-filter input {
+    width: 250px;
+}
+
+.search-filter input:focus,
+.search-filter select:focus {
+    border-color: #7c3aed;
+}
     </style>
 </head>
 
 <body>
 
     
-    <div class="navbar">
-        <div class="nav-left">
-            <img src="logo.png" class="logo">
-            <span class="navbar-logo">NITW Eats</span>
-        </div>
+<div class="navbar">
+    <div class="nav-left">
+        <img src="logo.png" class="logo">
+        <span class="navbar-logo">NITW Eats</span>
     </div>
+
+    <div class="nav-right">
+        <a href="login.html" class="login-btn">Login</a>
+        <a href="signup.html" class="signup-btn">Sign Up</a>
+    </div>
+</div>
 
     
     <div class="hero-section">
@@ -206,9 +277,36 @@
     </div>
 </section>
     <div class="main-container">
+        <div class="search-filter">
+
+    <!-- Search -->
+    <input type="text" id="searchInput" placeholder="Search food or stalls...">
+
+    <!-- Category Filter -->
+    <select id="categoryFilter">
+        <option value="all">All Categories</option>
+        <option value="Beverages">Beverages</option>
+        <option value="Desserts">Desserts</option>
+        <option value="Cafe">Cafe</option>
+        <option value="Fast Food">Fast Food</option>
+        <option value="Breakfast">Breakfast</option>
+    </select>
+
+    <!-- Location Filter -->
+    <select id="locationFilter">
+        <option value="all">All Locations</option>
+        <option value="Food Court">Food Court</option>
+        <option value="Library Plaza">Library Plaza</option>
+        <option value="Hostel Blocks">Hostel Blocks</option>
+    </select>
+
+</div>
         <div class="stall-list">
             
-            <a href="madras.html" class="stall-card">
+            <a href="madras.html" class="stall-card"
+                    data-name="Madras Filter Coffee"
+                    data-category="Beverages"
+                    data-location="Food Court">
                 <div class="stall-image" style="background-image: url('madras.jpg');"></div>
                 <div class="stall-info">
                     <span class="category-tag">Beverages</span>
@@ -217,7 +315,10 @@
                 </div>
             </a>
 
-            <a href="amul.html" class="stall-card">
+            <a href="amul.html" class="stall-card"
+   data-name="Amul Ice Cream"
+   data-category="Desserts"
+   data-location="Food Court">
                 <div class="stall-image" style="background-image: url('amul.jpg');"></div>
                 <div class="stall-info">
                     <span class="category-tag">Desserts</span>
@@ -226,7 +327,10 @@
                 </div>
             </a>
 
-            <a href="countryoven.html" class="stall-card">
+            <a href="countryoven.html" class="stall-card"
+   data-name="Country Oven"
+   data-category="Bakery"
+   data-location="Food Court">
                 <div class="stall-image" style="background-image: url('countryoven.jpg');"></div>
                 <div class="stall-info">
                     <span class="category-tag">Bakery</span>
@@ -235,7 +339,10 @@
                 </div>
             </a>
           <br>
-            <a href="nescafe.html" class="stall-card">
+            <a href="nescafe.html" class="stall-card"
+   data-name="Nescafe"
+   data-category="Cafe"
+   data-location="Library Plaza">
                 <div class="stall-image" style="background-image: url('nescafe.jpeg');"></div>
                 <div class="stall-info">
                     <span class="category-tag">Cafe</span>
@@ -244,7 +351,10 @@
                 </div>
             </a>
 
-            <a href="dominos.html" class="stall-card">
+            <a href="dominos.html" class="stall-card"
+   data-name="Dominos Pizza"
+   data-category="Fast Food"
+   data-location="Hostel Blocks">
                 <div class="stall-image" style="background-image: url('dominos.jpg');"></div>
                 <div class="stall-info">
                     <span class="category-tag">Fast Food</span>
@@ -253,7 +363,10 @@
                 </div>
             </a>
 
-            <a href="taaza.html" class="stall-card">
+            <a href="taaza.html" class="stall-card"
+   data-name="Taaza Tiffins"
+   data-category="Breakfast"
+   data-location="Hostel Blocks">
                 <div class="stall-image" style="background-image: url('taaza.webp');"></div>
                 <div class="stall-info">
                     <span class="category-tag">Breakfast</span>
@@ -269,6 +382,7 @@
     <div class="page-footer">
         © 2026 NIT Warangal Dining Directory
     </div>
+    <script src="index.js"></script>
 
 </body>
 </html>
