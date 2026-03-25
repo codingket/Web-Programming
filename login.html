@@ -1,144 +1,133 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Login - NITW Eats</title>
-    <style>
+<title>Login - NITW Eats</title>
 
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #7c3aed, #a78bfa);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #7c3aed, #a78bfa);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
 
-        .container {
-            background: white;
-            padding: 40px;
-            border-radius: 20px;
-            width: 350px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-            text-align: center;
-        }
+.container {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    width: 350px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    text-align: center;
+}
 
-        /* LOGO SECTION */
-        .brand {
-            margin-bottom: 20px;
-        }
+.brand img {
+    width: 80px;
+    border-radius: 50%;
+}
 
-        .brand img {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-        }
+.brand h1 {
+    color: #7c3aed;
+}
 
-        .brand h1 {
-            margin: 10px 0 0;
-            font-size: 24px;
-            color: #7c3aed;
-            font-family: Georgia, 'Times New Roman', Times, serif;
-        }
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
 
-        h2 {
-            color: #7c3aed;
-            margin-bottom: 20px;
-        }
+.btn {
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 20px;
+    background: #7c3aed;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
 
-        input {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border-radius: 10px;
-            border: 1px solid #ddd;
-            outline: none;
-        }
+.hidden {
+    display: none;
+}
 
-        input:focus {
-            border-color: #7c3aed;
-        }
+.error {
+    color: red;
+    font-size: 13px;
+}
 
-        .btn {
-            width: 100%;
-            padding: 10px;
-            margin-top: 15px;
-            border: none;
-            border-radius: 20px;
-            background: #7c3aed;
-            color: white;
-            font-weight: bold;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
-        .btn:hover {
-            background: #5b21b6;
-        }
-
-        .toggle-text {
-            margin-top: 15px;
-            font-size: 14px;
-        }
-
-        .toggle-text span {
-            color: #7c3aed;
-            cursor: pointer;
-            font-weight: bold;
-        }
-
-        .hidden {
-            display: none;
-        }
-
-    </style>
+.success {
+    color: green;
+    font-size: 13px;
+}
+</style>
 </head>
 
 <body>
 
 <div class="container">
 
-    <!-- BRAND -->
-    <div class="brand">
-        <img src="logo.png" alt="NITW Eats Logo">
-        <h1>NITW Eats</h1>
-    </div>
+<div class="brand">
+    <img src="logo.png">
+    <h1>NITW Eats</h1>
+</div>
 
-    <!-- LOGIN FORM -->
-    <div id="loginForm">
-        <h2>Login</h2>
-        <input type="email" placeholder="Email">
-        <input type="password" placeholder="Password">
-        <button class="btn">Login</button>
+<!-- LOGIN -->
+<div id="loginForm">
+    <h2>Login</h2>
 
-        <div class="toggle-text">
-            Don't have an account? 
-            <span onclick="toggleForm()">Sign Up</span>
-        </div>
-    </div>
+    <form id="sign-in">
+        <p id="login-error" class="error"></p>
 
-    <!-- SIGNUP FORM -->
-    <div id="signupForm" class="hidden">
-        <h2>Create Account</h2>
-        <input type="text" placeholder="Full Name">
-        <input type="email" placeholder="Email">
-        <input type="password" placeholder="Password">
-        <button class="btn">Sign Up</button>
+        <input type="email" id="signIn-email" name="email" placeholder="Email" required>
+        <input type="password" id="signIn-password" name="password" placeholder="Password" required>
 
-        <div class="toggle-text">
-            Already have an account? 
-            <span onclick="toggleForm()">Login</span>
-        </div>
-    </div>
+        <button class="btn" type="submit">Login</button>
+    </form>
+
+    <p>
+        Don't have an account? 
+        <span onclick="toggleForm()">Sign Up</span>
+    </p>
+</div>
+
+<!-- SIGNUP -->
+<div id="signupForm" class="hidden">
+    <h2>Create Account</h2>
+
+    <form id="sign-up">
+        <p id="signup-error" class="error"></p>
+        <p id="signup-success" class="success"></p>
+
+        <input type="text" id="username" name="username" placeholder="Full Name" required>
+        <input type="email" id="email" name="email" placeholder="Email" required>
+        <input type="password" id="password" name="password" placeholder="Password" required>
+
+        <button class="btn" type="submit">Sign Up</button>
+    </form>
+
+    <p>
+        Already have an account? 
+        <span onclick="toggleForm()">Login</span>
+    </p>
+</div>
 
 </div>
 
 <script>
-    function toggleForm() {
-        document.getElementById("loginForm").classList.toggle("hidden");
-        document.getElementById("signupForm").classList.toggle("hidden");
-    }
+function toggleForm() {
+    document.getElementById("loginForm").classList.toggle("hidden");
+    document.getElementById("signupForm").classList.toggle("hidden");
+}
 </script>
+
+<!-- BACKEND CONNECTION -->
+<script type="module" src="login.js"></script>
 
 </body>
 </html>
