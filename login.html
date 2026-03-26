@@ -4,67 +4,7 @@
 <title>Login - NITW Eats</title>
 
 <style>
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #7c3aed, #a78bfa);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-.container {
-    background: white;
-    padding: 40px;
-    border-radius: 20px;
-    width: 350px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-    text-align: center;
-}
-
-.brand img {
-    width: 80px;
-    border-radius: 50%;
-}
-
-.brand h1 {
-    color: #7c3aed;
-}
-
-input {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 10px;
-    border: 1px solid #ddd;
-}
-
-.btn {
-    width: 100%;
-    padding: 10px;
-    margin-top: 15px;
-    border: none;
-    border-radius: 20px;
-    background: #7c3aed;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.hidden {
-    display: none;
-}
-
-.error {
-    color: red;
-    font-size: 13px;
-}
-
-.success {
-    color: green;
-    font-size: 13px;
-}
+/* (keep your same CSS) */
 </style>
 </head>
 
@@ -77,56 +17,27 @@ input {
     <h1>NITW Eats</h1>
 </div>
 
-<!-- LOGIN -->
+<!-- LOGIN ONLY -->
 <div id="loginForm">
     <h2>Login</h2>
 
     <form id="sign-in">
         <p id="login-error" class="error"></p>
 
-        <input type="email" id="signIn-email" name="email" placeholder="Email" required>
-        <input type="password" id="signIn-password" name="password" placeholder="Password" required>
+        <input type="email" id="signIn-email" placeholder="Email" required>
+        <input type="password" id="signIn-password" placeholder="Password" required>
 
         <button class="btn" type="submit">Login</button>
     </form>
 
     <p>
         Don't have an account? 
-        <span onclick="toggleForm()">Sign Up</span>
-    </p>
-</div>
-
-<!-- SIGNUP -->
-<div id="signupForm" class="hidden">
-    <h2>Create Account</h2>
-
-    <form id="sign-up">
-        <p id="signup-error" class="error"></p>
-        <p id="signup-success" class="success"></p>
-
-        <input type="text" id="username" name="username" placeholder="Full Name" required>
-        <input type="email" id="email" name="email" placeholder="Email" required>
-        <input type="password" id="password" name="password" placeholder="Password" required>
-
-        <button class="btn" type="submit">Sign Up</button>
-    </form>
-
-    <p>
-        Already have an account? 
-        <span onclick="toggleForm()">Login</span>
+        <a href="signup.html">Sign Up</a>
     </p>
 </div>
 
 </div>
 
-<script>
-function toggleForm() {
-    document.getElementById("loginForm").classList.toggle("hidden");
-    document.getElementById("signupForm").classList.toggle("hidden");
-}
-</script>
-
-<!-- BACKEND CONNECTION -->
 <script type="module" src="login.js"></script>
 
 </body>
