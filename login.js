@@ -10,6 +10,7 @@ const supabase = createClient(
 // ================= CHECK SESSION ON LOAD =================
 async function checkUser() {
   const { data } = await supabase.auth.getSession();
+  console.log("SESSION CHECK:", data);
 
   const login_link = document.getElementById('login-link');
   const signup_link = document.getElementById('signup-link');
