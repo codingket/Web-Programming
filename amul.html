@@ -4,7 +4,7 @@
 <head>
     <title>Amul Ice Cream | NITW</title>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap"
-        rel="stylesheet">
+          rel="stylesheet">
 
     <style>
         body {
@@ -22,11 +22,11 @@
             border-bottom: 1px solid #eee;
         }
 
-        .navbar a {
-            text-decoration: none;
-            color: #0d47a1;
-            font-weight: 700;
-        }
+            .navbar a {
+                text-decoration: none;
+                color: #0d47a1;
+                font-weight: 700;
+            }
 
         /* BANNER */
         .stall-banner {
@@ -35,11 +35,11 @@
             padding: 80px 20px;
         }
 
-        .stall-banner h1 {
-            margin: 0;
-            font-size: 50px;
-            font-weight: 800;
-        }
+            .stall-banner h1 {
+                margin: 0;
+                font-size: 50px;
+                font-weight: 800;
+            }
 
         /* CONTAINER */
         .content-container {
@@ -97,10 +97,10 @@
             transition: 0.3s ease;
         }
 
-        .food-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
-        }
+            .food-card:hover {
+                transform: translateY(-6px);
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+            }
 
         .food-photo {
             width: 100%;
@@ -145,185 +145,151 @@
 
 <body>
 
-    <!-- NAVBAR -->
     <div class="navbar">
         <a href="index.html">← Back to Campus Directory</a>
     </div>
 
-    <!-- BANNER -->
     <div class="stall-banner">
         <h1>Amul Ice Cream</h1>
     </div>
 
-    <!-- CONTENT -->
     <div class="content-container">
 
-        <!-- INFO -->
         <div class="info-card">
             <p class="location-tag">📍 SAC Area, NIT Warangal</p>
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3794.8821507453245!2d79.53026197516634!3d17.984219085337784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a334fbc0e73da33%3A0x65c556630c690f8!2sFOOD%20STREET%20NITW!5e0!3m2!1sen!2sin!4v1774536730774!5m2!1sen!2sin"
-                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade" width="100%" height="400"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3794.8821507453245!2d79.53026197516634!3d17.984219085337784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a334fbc0e73da33%3A0x65c556630c690f8!2sFOOD%20STREET%20NITW!5e0!3m2!1sen!2sin!4v1774536730774!5m2!1sen!2sin"
+                    width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
             <p style="color:#444;">
                 The go-to spot for chilled treats, milkshakes, and late-night desserts. Perfect for beating the Warangal
                 heat.
             </p>
         </div>
 
-        <!-- MENU -->
         <div class="info-card">
 
-            <!-- 🔍 SEARCH BAR -->
-            <input type="text" id="menuSearch" placeholder="Search items..."
-                style="padding:10px; width:300px; border-radius:10px; border:1px solid #ccc; margin-bottom:20px;">
+            <input type="text" id="menuSearch" placeholder="Search items..." onkeyup="filterMenu()"
+                   style="padding:10px; width:300px; border-radius:10px; border:1px solid #ccc; margin-bottom:20px;">
 
-            <p class="card-heading">🍦 Ice Cream Menu</p>
+            <p class="card-heading">🍦 Ice Cream & Snacks Menu</p>
 
-            <div class="menu-grid">
+            <div class="menu-grid" id="menuItems">
 
-                <!-- SCOOPS -->
-                <!-- SCOOPS -->
-                <div class="category-title">Scoops</div>
+                <div class="category-title">Ice Cream & Kulfi</div>
 
-                <div class="food-card" data-name="Vanilla">
-                    <img src="vanilla.jpg" class="food-photo">
+                <div class="food-card" data-name="Chocolate Ice Cream">
+                    <img src="https://tiimg.tistatic.com/fp/1/007/593/amul-tricone-butterscotch-ice-cream-with-nuts-and-chocolate-deliciously-creamy-736.jpg"  class="food-photo">
                     <div class="food-info">
-                        <p class="food-name">Vanilla</p>
-                        <p class="food-price">₹30</p>
-                    </div>
-                </div>
-
-                <div class="food-card" data-name="Chocolate">
-                    <img src="chocolate.jpg" class="food-photo">
-                    <div class="food-info">
-                        <p class="food-name">Chocolate</p>
-                        <p class="food-price">₹30</p>
-                    </div>
-                </div>
-
-                <div class="food-card" data-name="Strawberry">
-                    <img src="strawberry.jpg" class="food-photo">
-                    <div class="food-info">
-                        <p class="food-name">Strawberry</p>
-                        <p class="food-price">₹30</p>
-                    </div>
-                </div>
-
-                <div class="food-card" data-name="Butterscotch">
-                    <img src="butterscotch.jpg" class="food-photo">
-                    <div class="food-info">
-                        <p class="food-name">Butterscotch</p>
-                        <p class="food-price">₹35</p>
-                    </div>
-                </div>
-
-                <!-- SUNDAES -->
-                <div class="category-title">Sundaes</div>
-
-                <div class="food-card" data-name="Chocolate Sundae">
-                    <img src="choco_sundae.jpg" class="food-photo">
-                    <div class="food-info">
-                        <p class="food-name">Chocolate Sundae</p>
-                        <p class="food-price">₹80</p>
-                    </div>
-                </div>
-
-                <div class="food-card" data-name="Brownie Sundae">
-                    <img src="brownie.jpg" class="food-photo">
-                    <div class="food-info">
-                        <p class="food-name">Brownie Sundae</p>
-                        <p class="food-price">₹100</p>
-                    </div>
-                </div>
-
-                <div class="food-card" data-name="Fruit Sundae">
-                    <img src="fruit_sundae.jpg" class="food-photo">
-                    <div class="food-info">
-                        <p class="food-name">Fruit Sundae</p>
-                        <p class="food-price">₹90</p>
-                    </div>
-                </div>
-
-                <!-- SHAKES -->
-                <div class="category-title">Milkshakes</div>
-
-                <div class="food-card" data-name="Oreo Shake">
-                    <img src="oreo.jpg" class="food-photo">
-                    <div class="food-info">
-                        <p class="food-name">Oreo Shake</p>
-                        <p class="food-price">₹110</p>
-                    </div>
-                </div>
-
-                <div class="food-card" data-name="KitKat Shake">
-                    <img src="kitkat.jpg" class="food-photo">
-                    <div class="food-info">
-                        <p class="food-name">KitKat Shake</p>
-                        <p class="food-price">₹110</p>
-                    </div>
-                </div>
-
-                <div class="food-card" data-name="Mango Shake">
-                    <img src="mango.jpg" class="food-photo">
-                    <div class="food-info">
-                        <p class="food-name">Mango Shake</p>
-                        <p class="food-price">₹100</p>
-                    </div>
-                </div>
-
-                <!-- ICE CREAM CUPS -->
-                <div class="category-title">Ice Cream Cups</div>
-
-                <div class="food-card" data-name="Amul Cup">
-                    <img src="amul_cup.jpg" class="food-photo">
-                    <div class="food-info">
-                        <p class="food-name">Amul Cup</p>
+                        <p class="food-name">Chocolate Ice Cream</p>
                         <p class="food-price">₹40</p>
                     </div>
                 </div>
 
-                <div class="food-card" data-name="Rajbhog Cup">
-                    <img src="rajbhog.jpg" class="food-photo">
+                <div class="food-card" data-name="Mango Ice Cream">
+                    <img src="https://tiimg.tistatic.com/fp/1/007/844/packaging-size-60-ml-mango-flavor-duetz-amul-ice-cream--549.jpg" class="food-photo">
                     <div class="food-info">
-                        <p class="food-name">Rajbhog Cup</p>
+                        <p class="food-name">Mango Ice Cream</p>
+                        <p class="food-price">₹30</p>
+                    </div>
+                </div>
+
+                <div class="food-card" data-name="Protein Kulfi">
+                    <img src="https://cdn.grofers.com/da/cms-assets/cms/product/28e6d19f-6463-4867-a756-c84a356dc3d3.jpg" class="food-photo">
+                    <div class="food-info">
+                        <p class="food-name">Protein Kulfi</p>
+                        <p class="food-price">₹40</p>
+                    </div>
+                </div>
+
+                <div class="food-card" data-name="Pistachio Ice Cream">
+                    <img src="https://5.imimg.com/data5/SELLER/Default/2025/2/486409676/XS/ND/EL/226175321/amul-green-pista-icecream-500x500.jpg" class="food-photo">
+                    <div class="food-info">
+                        <p class="food-name">Pistachio Ice Cream</p>
+                        <p class="food-price">₹25</p>
+                    </div>
+                </div>
+
+                <div class="category-title">Cold Beverages</div>
+
+                <div class="food-card" data-name="Butterscotch Shake">
+                    <img src="https://tse4.mm.bing.net/th/id/OIP.aplvovZBbJA7NJWpbwEzHQHaLH?pid=Api&amp;P=0&amp;h=180" class="food-photo">
+                    <div class="food-info">
+                        <p class="food-name">Butterscotch Shake</p>
                         <p class="food-price">₹50</p>
                     </div>
                 </div>
 
-                <!-- EXTRAS -->
-                <div class="category-title">Extras</div>
-
-                <div class="food-card" data-name="Cone">
-                    <img src="cone.jpg" class="food-photo">
+                <div class="food-card" data-name="Oreo Shake">
+                    <img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=500" class="food-photo">
                     <div class="food-info">
-                        <p class="food-name">Cone</p>
+                        <p class="food-name">Oreo Shake</p>
+                        <p class="food-price">₹65</p>
+                    </div>
+                </div>
+
+                <div class="food-card" data-name="Lemon Juice">
+                    <img src="https://tse2.mm.bing.net/th/id/OIP.VJPnYh8kRhv5vOdv0mvU3wHaE7?pid=Api&amp;P=0&amp;h=180"class="food-photo">
+                    <div class="food-info">
+                        <p class="food-name">Fresh Lemon Juice</p>
                         <p class="food-price">₹10</p>
                     </div>
                 </div>
 
-                <div class="food-card" data-name="Chocolate Syrup">
-                    <img src="choco_syrup.jpg" class="food-photo">
+                <div class="category-title">Hot Snacks</div>
+
+                <div class="food-card" data-name="Paneer Sandwich">
+                    <img src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=500" class="food-photo">
                     <div class="food-info">
-                        <p class="food-name">Chocolate Syrup</p>
-                        <p class="food-price">₹20</p>
+                        <p class="food-name">Paneer Sandwich</p>
+                        <p class="food-price">₹90</p>
+                    </div>
+                </div>
+
+                <div class="food-card" data-name="Chicken Sandwich">
+                    <img src="https://images.unsplash.com/photo-1550507992-eb63ffee0847?auto=format&fit=crop&w=500" class="food-photo">
+                    <div class="food-info">
+                        <p class="food-name">Chicken Sandwich</p>
+                        <p class="food-price">₹60</p>
+                    </div>
+                </div>
+
+                <div class="food-card" data-name="French Fries">
+                    <img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=500" class="food-photo">
+                    <div class="food-info">
+                        <p class="food-name">French Fries</p>
+                        <p class="food-price">₹50</p>
+                    </div>
+                </div>
+
+                <div class="food-card" data-name="Paneer Burger">
+                    <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=500" class="food-photo">
+                    <div class="food-info">
+                        <p class="food-name">Paneer Burger</p>
+                        <p class="food-price">₹60</p>
+                    </div>
+                </div>
+
+                <div class="food-card" data-name="Chicken Burger">
+                    <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=500" class="food-photo">
+                    <div class="food-info">
+                        <p class="food-name">Chicken Burger</p>
+                        <p class="food-price">₹60</p>
                     </div>
                 </div>
 
             </div>
         </div>
 
-        <!-- REVIEWS -->
-        <!-- <div class="info-card">
-            <p class="card-heading">⭐ Student Reviews</p>
-
-            <div class="review-box">
-                <p class="stars">★★★★★</p>
-                <p>"Best place for late night ice cream runs."</p>
-                <p class="student-credit">- Sneha (3rd Year)</p>
-            </div>
-        </div> -->
-        <script src="amul.js"></script>
+        <script>
+            function filterMenu() {
+                let input = document.getElementById('menuSearch').value.toLowerCase();
+                let cards = document.getElementsByClassName('food-card');
+                for (let i = 0; i < cards.length; i++) {
+                    let name = cards[i].getAttribute('data-name').toLowerCase();
+                    cards[i].style.display = name.includes(input) ? "block" : "none";
+                }
+            }
+        </script>
 
     </div>
 
