@@ -7,9 +7,42 @@ const supabase = createClient(
   'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1uZ2Jwa2lxcHZ0Zmxod2Zxb3hqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQ0NTYwOTMsImV4cCI6MjA5MDAzMjA5M30.q6CraKNW5obBpt3c8ZB1fEirVVVrstODFhTbIgKzSO0'
 )
 
+// ================= CHECK SESSION ON LOAD =================
+async function checkUser() {
+  const { data } = await supabase.auth.getSession();
+
+  const login_link = document.getElementById('login-link');
+  const signup_link = document.getElementById('signup-link');
+  const logout_btn = document.getElementById('logout-btn');
+
+  if(data.session){
+    const user = data.session.user;
+    const name = user.user_metadata?.display_name || "Profile";
+
+    if(login_link){
+      login_link.innerText = name;
+      login_link.href = "#";
+    }
+
+    if(signup_link){
+      signup_link.style.display = "none";
+    }
+
+    if(logout_btn){
+      logout_btn.style.display = "inline-block";
+    }
+  }
+}
+
+// run on page load
+window.addEventListener("DOMContentLoaded", () => {
+  checkUser();
+});
+
 // ================= AUTH STATE =================
 supabase.auth.onAuthStateChange((event, session) => {
   const login_link = document.getElementById('login-link');
+  const signup_link = document.getElementById('signup-link');
   const logout_btn = document.getElementById('logout-btn');
   
   if(session){
@@ -17,22 +50,40 @@ supabase.auth.onAuthStateChange((event, session) => {
 
     const name = currentUser.user_metadata?.display_name || "Profile";
 
-    if(login_link) {
-        login_link.innerText = name;
-        login_link.href = "userdashboard.html"; 
+    // show username
+    if(login_link){
+      login_link.innerText = name;
+      login_link.href = "#";
     }
 
-    if(logout_btn) logout_btn.style.display = "inline-block";
-    
+    // hide signup
+    if(signup_link){
+      signup_link.style.display = "none";
+    }
+
+    // show logout
+    if(logout_btn){
+      logout_btn.style.display = "inline-block";
+    }
+
   } else {
     currentUser = null;
 
-    if(login_link) {
-        login_link.innerText = "Login/Sign-Up";
-        login_link.href = "login.html";
+    // reset login
+    if(login_link){
+      login_link.innerText = "Login";
+      login_link.href = "login.html";
     }
 
-    if(logout_btn) logout_btn.style.display = "none";
+    // show signup again
+    if(signup_link){
+      signup_link.style.display = "inline-block";
+    }
+
+    // hide logout
+    if(logout_btn){
+      logout_btn.style.display = "none";
+    }
   }
 });
 
