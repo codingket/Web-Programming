@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kathi Junction | NITW</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #f4f7f9;
+            text-align: center;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            background-color: white;
+            padding: 20px 50px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: #b91c1c;
+            font-weight: 700;
+        }
+
+        /* BANNER */
+        .stall-banner {
+            background-color: #b91c1c;
+            color: white;
+            padding: 80px 20px;
+        }
+
+        .stall-banner h1 {
+            margin: 0;
+            font-size: 50px;
+            font-weight: 800;
+        }
+
+        /* CONTAINER */
+        .content-container {
+            width: 1000px;
+            margin: 40px auto;
+        }
+
+        /* CARD */
+        .info-card {
+            background-color: white;
+            padding: 40px;
+            border-radius: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            text-align: left;
+        }
+
+        .card-heading {
+            font-size: 24px;
+            font-weight: 800;
+            margin-bottom: 25px;
+        }
+
+        /* GRID */
+        .menu-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+
+        .category-title {
+            width: 100%;
+            color: #b91c1c;
+            font-size: 18px;
+            font-weight: 800;
+            text-transform: uppercase;
+            margin: 30px 0 10px;
+            border-bottom: 2px solid #ef4444;
+            padding-bottom: 5px;
+        }
+
+        /* FOOD CARD */
+        .food-card {
+            background-color: white;
+            border: 1px solid #eee;
+            border-radius: 18px;
+            width: 220px;
+            overflow: hidden;
+            transition: 0.3s ease;
+        }
+
+        .food-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        /* IMAGE PLACEHOLDER */
+        .food-photo {
+            width: 100%;
+            height: 140px;
+            background-color: #e5e7eb; /* placeholder */
+        }
+
+        .food-info {
+            padding: 15px;
+        }
+
+        .food-name {
+            font-weight: 700;
+            font-size: 15px;
+            margin: 0;
+        }
+
+        .food-price {
+            color: #b91c1c;
+            font-weight: 800;
+            margin-top: 8px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <div class="navbar">
+        <a href="index.html">← Back to Campus Directory</a>
+    </div>
+
+    <!-- BANNER -->
+    <div class="stall-banner">
+        <h1>Kathi Junction</h1>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="content-container">
+
+        <div class="info-card">
+            <p style="color:#b91c1c; font-weight:800;">📍 Near Hostel Area, NIT Warangal</p>
+            <p>Famous for rolls, shawarma and momos. Perfect for quick bites and evening cravings.</p>
+        </div>
+
+        <!-- MENU -->
+        <div class="info-card">
+            <p class="card-heading">🌯 Full Menu</p>
+
+            <div class="menu-grid">
+
+                <!-- VEG ROLLS -->
+                <div class="category-title">Veg Kathi Roll</div>
+
+                <div class="food-card"><div class="food-photo"></div><div class="food-info"><p class="food-name">Aloo Roll</p><p class="food-price">₹50</p></div></div>
+                <div class="food-card"><div class="food-photo"></div><div class="food-info"><p class="food-name">Veggie Roll</p><p class="food-price">₹50</p></div></div>
+                <div class="food-card"><div class="food-photo"></div><div class="food-info"><p class="food-name">Paneer Roll</p><p class="food-price">₹70</p></div></div>
+                <div class="food-card"><div class="food-photo"></div><div class="food-info"><p class="food-name">Paneer Bhurji Roll</p><p class="food-price">₹70</p></div></div>
+                <div class="food-card"><div class="food-photo"></div><div class="food-info"><p class="food-name">Mushroom Roll</p><p class="food-price">₹70</p></div></div>
+                <div class="food-card"><div class="food-photo"></div><div class="food-info"><p class="food-name">Soya Roll</p><p class="food-price">₹70</p></div></div>
+                <div class="food-card"><div class="food-photo"></div><div class="food-info"><p class="food-name">Veg Cheese Roll</p><p class="food-price">₹70</p></div></div>
+                <div class="food-card"><div class="food-photo"></div><div class="food-info"><p class="food-name">Butter Paneer Roll</p><p class="food-price">₹100</p></div></div>
+
+                <!-- NON VEG -->
+                <div class="category-title">Non Veg Kathi Roll</div>
+
+                <div class="food-card"><div class="food-photo"></div><div class="food-info"><p class="food-name">Single Egg Roll</p><p class="food-price">₹45</p></div></div>
+                <div class="food-card"><div class="food-photo"></div><div class="food-info"><p class="food-name">Double Egg Roll</p><p class="food-price">₹55</p></div></div>
+                <div class="food-card"><div class="food-photo"></div><div class="food-info"><p class="food-name">Chicken Roll</p><p class="food-price">₹80</p></div></div>
+                <div class="food-card"><div class="food-photo"></div><div class="food-info"><p class="food-name">Chicken Keema Roll</p><p class="food-price">₹90</p></div></div>
+                <div class="food-card"><div class="food-photo"></div><div class="food-info"><p class="food-name">Double Egg Chicken Roll</p><p class="food-price">₹100</p></div></div>
+                <div class="food-card"><div class="food-photo"></div><div class="food-info"><p class="food-name">Egg Chicken Keema Roll</p><p class="food-price">₹100</p></div></div>
+                <div class="food-card"><div class="food-photo"></div><div class="food-info"><p class="food-name">Butter Chicken Roll</p><p class="food-price">₹120</p></div></div>
+
+                <!-- SHAWARMA -->
+                <div class="category-title">Shawarma</div>
+
+                <div class="food-card"><div class="food-photo"></div><div class="food-info"><p class="food-name">Paneer Shawarma</p><p class="food-price">₹100</p></div></div>
+                <div class="food-card"><div class="food-photo"></div><div class="food-info"><p class="food-name">Chicken Shawarma</p><p class="food-price">₹100</p></div></div>
+
+                <!-- MOMOS -->
+                <div class="category-title">Momos</div>
+
+                <div class="food-card"><div class="food-photo"></div><div class="food-info"><p class="food-name">Veg Momos</p><p class="food-price">₹120</p></div></div>
+                <div class="food-card"><div class="food-photo"></div><div class="food-info"><p class="food-name">Chicken Momos</p><p class="food-price">₹150</p></div></div>
+
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
