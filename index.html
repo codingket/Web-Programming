@@ -267,8 +267,9 @@
     </div>
 
     <div class="nav-right">
-        <a href="login.html" class="login-btn">Login</a>
-        <a href="signup.html" class="signup-btn">Sign Up</a>
+        <a href="login.html" id="login-link" class="login-btn">Login</a>
+        <a href="signup.html" id="signup-link" class="signup-btn">Sign Up</a>
+        <button id="logout-btn" class="login-btn" style="display:none;">Logout</button>
     </div>
 </div>
 
@@ -373,9 +374,9 @@
             </a>
 
             <a href="dominos.html" class="stall-card"
-   data-name="Dominos Pizza"
-   data-category="Fast Food"
-   data-location="Hostel Blocks">
+                   data-name="Dominos Pizza"
+                   data-category="Fast Food"
+                   data-location="Hostel Blocks">
                 <div class="stall-image" style="background-image: url('dominos.jpg');"></div>
                 <div class="stall-info">
                     <span class="category-tag">Fast Food</span>
@@ -385,9 +386,9 @@
             </a>
 
             <a href="taaza.html" class="stall-card"
-   data-name="Taaza Tiffins"
-   data-category="Breakfast"
-   data-location="Hostel Blocks">
+                   data-name="Taaza Tiffins"
+                   data-category="Breakfast"
+                   data-location="Hostel Blocks">
                 <div class="stall-image" style="background-image: url('taaza.webp');"></div>
                 <div class="stall-info">
                     <span class="category-tag">Breakfast</span>
@@ -404,6 +405,6 @@
         © 2026 NIT Warangal Dining Directory
     </div>
     <script src="index.js"></script>
-
+    <script type="module" src="login.js"></script>
 </body>
 </html>
