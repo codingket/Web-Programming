@@ -3,7 +3,7 @@
 <head>
     <title>Nescafe | NITW</title>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
-    
+
     <style>
         body {
             margin: 0;
@@ -20,11 +20,11 @@
             border-bottom: 1px solid #eee;
         }
 
-        .navbar a {
-            text-decoration: none;
-            color: #111;
-            font-weight: 700;
-        }
+            .navbar a {
+                text-decoration: none;
+                color: #111;
+                font-weight: 700;
+            }
 
         /* BANNER */
         .stall-banner {
@@ -33,11 +33,11 @@
             padding: 80px 20px;
         }
 
-        .stall-banner h1 {
-            margin: 0;
-            font-size: 50px;
-            font-weight: 800;
-        }
+            .stall-banner h1 {
+                margin: 0;
+                font-size: 50px;
+                font-weight: 800;
+            }
 
         /* CONTAINER */
         .content-container {
@@ -96,10 +96,10 @@
             transition: 0.3s ease;
         }
 
-        .food-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-        }
+            .food-card:hover {
+                transform: translateY(-6px);
+                box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            }
 
         .food-photo {
             width: 100%;
@@ -123,298 +123,162 @@
             font-weight: 800;
             margin-top: 8px;
         }
-
-        /* REVIEWS */
-        .review-box {
-            border-left: 5px solid #111;
-            padding-left: 20px;
-            margin-bottom: 20px;
-        }
-
-        .stars {
-            color: #ffa000;
-        }
-
-        .student-credit {
-            font-weight: 700;
-            color: #111;
-        }
     </style>
 </head>
 
 <body>
 
-    <!-- NAVBAR -->
     <div class="navbar">
         <a href="index.html">← Back to Campus Directory</a>
     </div>
 
-    <!-- BANNER -->
     <div class="stall-banner">
         <h1>Nescafe</h1>
     </div>
 
-    <!-- CONTENT -->
     <div class="content-container">
 
-        <!-- INFO -->
         <div class="info-card">
             <p class="location-tag">📍 Library Plaza, NIT Warangal</p>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1230.338795287943!2d79.52989120517695!3d17.984147194485473!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a334fbbc9889825%3A0xdad42ccaf56c83ad!2zTmVzY2Fmw6k!5e0!3m2!1sen!2sin!4v1774536966176!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1230.338795287943!2d79.52989120517695!3d17.984147194485473!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a334fbbc9889825%3A0xdad42ccaf56c83ad!2zTmVzY2Fmw6k!5e0!3m2!1sen!2sin!4v1774536966176!5m2!1sen!2sin" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             <p style="color:#444;">
                 The ultimate student hangout for quick bites, Maggi varieties, and late-night cravings. Known for its wide range of flavors and fast service.
             </p>
         </div>
 
-    <!-- MENU -->
-    <div class="info-card">
-        <!-- SEARCH BAR -->
-        <input type="text" id="menuSearch" placeholder="Search items..."
-            style="padding:10px; width:300px; border-radius:10px; border:1px solid #ccc; margin-bottom:20px;">
+        <div class="info-card">
+            <input type="text" id="menuSearch" placeholder="Search items..."
+                   style="padding:10px; width:300px; border-radius:10px; border:1px solid #ccc; margin-bottom:20px;">
 
-        <p class="card-heading">☕ Full Menu</p>
+            <p class="card-heading">☕ Full Menu</p>
 
-        <div class="menu-grid">
+            <div class="menu-grid">
 
-            <!-- CLASSIC -->
-            <div class="category-title">Classic</div>
+                <div class="category-title">Hot Beverages</div>
 
-            <div class="food-card" data-name="Original Masala Maggi">
-            <img src="items/maggi.jpg" class="food-photo">
-            <div class="food-info">
-                <p class="food-name">Original Masala Maggi</p>
-                <p class="food-price">₹48</p>
-            </div>
-            </div>
+                <div class="food-card" data-name="Nescafe Classic">
+                    <img src="items/maggi.jpg" class="food-photo">
+                    <div class="food-info">
+                        <p class="food-name">Nescafe Classic</p>
+                        <p class="food-price">₹15</p>
+                    </div>
+                </div>
 
-            <div class="food-card" data-name="Vegetable Masala Maggi">
-            <img src="items/maggi.jpg" class="food-photo">
-            <div class="food-info">
-                <p class="food-name">Vegetable Masala Maggi</p>
-                <p class="food-price">₹48</p>
-            </div>
-            </div>
+                <div class="food-card" data-name="Nestea Cardamom Tea">
+                    <img src="items/maggi.jpg" class="food-photo">
+                    <div class="food-info">
+                        <p class="food-name">Nestea Cardamom Tea</p>
+                        <p class="food-price">₹15</p>
+                    </div>
+                </div>
 
-            <div class="food-card" data-name="Chilli Maggi">
-            <img src="items/maggi.jpg" class="food-photo">
-            <div class="food-info">
-                <p class="food-name">Chilli Maggi</p>
-                <p class="food-price">₹48</p>
-            </div>
-            </div>
+                <div class="food-card" data-name="Nestea Lemon Tea">
+                    <img src="items/maggi.jpg" class="food-photo">
+                    <div class="food-info">
+                        <p class="food-name">Nestea Lemon Tea</p>
+                        <p class="food-price">₹20</p>
+                    </div>
+                </div>
 
-            <div class="food-card" data-name="Haldi Maggi">
-            <img src="items/maggi.jpg" class="food-photo">
-            <div class="food-info">
-                <p class="food-name">Haldi Maggi</p>
-                <p class="food-price">₹48</p>
-            </div>
-            </div>
+                <div class="food-card" data-name="Nescafe Cappuccino">
+                    <img src="items/maggi.jpg" class="food-photo">
+                    <div class="food-info">
+                        <p class="food-name">Nescafe Cappuccino</p>
+                        <p class="food-price">₹25</p>
+                    </div>
+                </div>
 
-            <div class="food-card" data-name="Capsicum Maggi">
-            <img src="items/maggi.jpg" class="food-photo">
-            <div class="food-info">
-                <p class="food-name">Capsicum Maggi</p>
-                <p class="food-price">₹48</p>
-            </div>
-            </div>
+                <div class="category-title">Cold Beverages</div>
 
-            <div class="food-card" data-name="Tomato Chatpata">
-            <img src="items/maggi.jpg" class="food-photo">
-            <div class="food-info">
-                <p class="food-name">Tomato Chatpata</p>
-                <p class="food-price">₹48</p>
-            </div>
-            </div>
+                <div class="food-card" data-name="Nestea Iced Lemon Tea">
+                    <img src="items/maggi.jpg" class="food-photo">
+                    <div class="food-info">
+                        <p class="food-name">Nestea Iced Lemon Tea</p>
+                        <p class="food-price">₹30</p>
+                    </div>
+                </div>
 
+                <div class="food-card" data-name="Nescafe Frappe Cold Coffee">
+                    <img src="items/maggi.jpg" class="food-photo">
+                    <div class="food-info">
+                        <p class="food-name">Nescafe Frappe Cold Coffee</p>
+                        <p class="food-price">₹40</p>
+                    </div>
+                </div>
 
-            <!-- PREMIUM -->
-            <div class="category-title">Premium</div>
+                <div class="food-card" data-name="Nesquick Chocolate Shake">
+                    <img src="items/maggi.jpg" class="food-photo">
+                    <div class="food-info">
+                        <p class="food-name">Nesquick Chocolate Shake</p>
+                        <p class="food-price">₹50</p>
+                    </div>
+                </div>
 
-            <div class="food-card" data-name="Special Masala Maggi">
-            <img src="items/maggi.jpg" class="food-photo">
-            <div class="food-info">
-                <p class="food-name">Special Masala Maggi</p>
-                <p class="food-price">₹60</p>
-            </div>
-            </div>
+                <div class="category-title">Nescafe Beans Coffee</div>
 
-            <div class="food-card" data-name="Double Masala Maggi">
-            <img src="items/maggi.jpg" class="food-photo">
-            <div class="food-info">
-                <p class="food-name">Double Masala Maggi</p>
-                <p class="food-price">₹60</p>
-            </div>
-            </div>
+                <div class="food-card" data-name="Nescafe Espresso">
+                    <img src="items/maggi.jpg" class="food-photo">
+                    <div class="food-info">
+                        <p class="food-name">Nescafe Espresso</p>
+                        <p class="food-price">₹30</p>
+                    </div>
+                </div>
 
-            <div class="food-card" data-name="Garlic Maggi">
-            <img src="items/maggi.jpg" class="food-photo">
-            <div class="food-info">
-                <p class="food-name">Garlic Maggi</p>
-                <p class="food-price">₹60</p>
-            </div>
-            </div>
+                <div class="food-card" data-name="Nescafe Cafe Latte">
+                    <img src="items/maggi.jpg" class="food-photo">
+                    <div class="food-info">
+                        <p class="food-name">Nescafe Cafe Latte</p>
+                        <p class="food-price">₹30</p>
+                    </div>
+                </div>
 
-            <div class="food-card" data-name="Fresh Pepper Maggi">
-            <img src="items/maggi.jpg" class="food-photo">
-            <div class="food-info">
-                <p class="food-name">Fresh Pepper Maggi</p>
-                <p class="food-price">₹60</p>
-            </div>
-            </div>
+                <div class="food-card" data-name="Nescafe Tapori Coffee">
+                    <img src="items/maggi.jpg" class="food-photo">
+                    <div class="food-info">
+                        <p class="food-name">Nescafe Tapori Coffee</p>
+                        <p class="food-price">₹30</p>
+                    </div>
+                </div>
 
-            <div class="food-card" data-name="Jain Maggi">
-            <img src="items/maggi.jpg" class="food-photo">
-            <div class="food-info">
-                <p class="food-name">Jain Maggi</p>
-                <p class="food-price">₹60</p>
-            </div>
-            </div>
+                <div class="category-title">Nestle Maggi</div>
 
+                <div class="food-card" data-name="Maggi Masala Noodles">
+                    <img src="items/maggi.jpg" class="food-photo">
+                    <div class="food-info">
+                        <p class="food-name">Maggi Masala Noodles</p>
+                        <p class="food-price">₹40</p>
+                    </div>
+                </div>
 
-            <!-- EXOTIC -->
-            <div class="category-title">Exotic</div>
+                <div class="food-card" data-name="Maggi Korean BBQ Veg">
+                    <img src="items/maggi.jpg" class="food-photo">
+                    <div class="food-info">
+                        <p class="food-name">Maggi Korean BBQ Veg</p>
+                        <p class="food-price">₹50</p>
+                    </div>
+                </div>
 
-            <div class="food-card" data-name="Oregano Maggi">
-            <img src="items/maggi.jpg" class="food-photo">
-            <div class="food-info">
-                <p class="food-name">Oregano Maggi</p>
-                <p class="food-price">₹80</p>
-            </div>
-            </div>
+                <div class="food-card" data-name="Maggi Masala Fried Noodles">
+                    <img src="items/maggi.jpg" class="food-photo">
+                    <div class="food-info">
+                        <p class="food-name">Maggi Masala Fried Noodles</p>
+                        <p class="food-price">₹60</p>
+                    </div>
+                </div>
 
-            <div class="food-card" data-name="Patiala Tandoori Maggi">
-            <img src="items/maggi.jpg" class="food-photo">
-            <div class="food-info">
-                <p class="food-name">Patiala Tandoori Maggi</p>
-                <p class="food-price">₹80</p>
-            </div>
-            </div>
-
-            <div class="food-card" data-name="Chilli Garlic Maggi">
-            <img src="items/maggi.jpg" class="food-photo">
-            <div class="food-info">
-                <p class="food-name">Chilli Garlic Maggi</p>
-                <p class="food-price">₹80</p>
-            </div>
-            </div>
-
-            <div class="food-card" data-name="Peri Peri Maggi">
-            <img src="items/maggi.jpg" class="food-photo">
-            <div class="food-info">
-                <p class="food-name">Peri Peri Maggi</p>
-                <p class="food-price">₹80</p>
-            </div>
-            </div>
-
-            <div class="food-card" data-name="Shillong Schezwan Maggi">
-            <img src="items/maggi.jpg" class="food-photo">
-            <div class="food-info">
-                <p class="food-name">Shillong Schezwan Maggi</p>
-                <p class="food-price">₹80</p>
-            </div>
-            </div>
-
-            <div class="food-card" data-name="Aata Masala Maggi">
-            <img src="items/maggi.jpg" class="food-photo">
-            <div class="food-info">
-                <p class="food-name">Aata Masala Maggi</p>
-                <p class="food-price">₹80</p>
-            </div>
-            </div>
-
-            <div class="food-card" data-name="Butter Double Masala Maggi">
-            <img src="items/maggi.jpg" class="food-photo">
-            <div class="food-info">
-                <p class="food-name">Butter Double Masala Maggi</p>
-                <p class="food-price">₹80</p>
-            </div>
-            </div>
-
-            <div class="food-card" data-name="Desi Cheese Maggi">
-            <img src="items/maggi.jpg" class="food-photo">
-            <div class="food-info">
-                <p class="food-name">Desi Cheese Maggi</p>
-                <p class="food-price">₹80</p>
-            </div>
-            </div>
-
-
-            <!-- LIMITED -->
-            <div class="category-title">Limited</div>
-
-            <div class="food-card" data-name="Rajasthani Chutney Maggi">
-            <img src="items/maggi.jpg" class="food-photo">
-            <div class="food-info">
-                <p class="food-name">Rajasthani Chutney Maggi</p>
-                <p class="food-price">₹99</p>
-            </div>
-            </div>
-
-            <div class="food-card" data-name="Thai Maggi">
-            <img src="items/maggi.jpg" class="food-photo">
-            <div class="food-info">
-                <p class="food-name">Thai Maggi</p>
-                <p class="food-price">₹99</p>
-            </div>
-            </div>
-
-            <div class="food-card" data-name="Tandoori Paneer Maggi">
-            <img src="items/maggi.jpg" class="food-photo">
-            <div class="food-info">
-                <p class="food-name">Tandoori Paneer Maggi</p>
-                <p class="food-price">₹99</p>
-            </div>
-            </div>
-
-            <div class="food-card" data-name="Hong Kong Fusion Maggi">
-            <img src="items/maggi.jpg" class="food-photo">
-            <div class="food-info">
-                <p class="food-name">Hong Kong Fusion Maggi</p>
-                <p class="food-price">₹99</p>
-            </div>
-            </div>
-
-            <div class="food-card" data-name="Masala Oats Noodles">
-            <img src="items/maggi.jpg" class="food-photo">
-            <div class="food-info">
-                <p class="food-name">Masala Oats Noodles</p>
-                <p class="food-price">₹99</p>
-            </div>
-            </div>
-
-            <div class="food-card" data-name="Bangkok Sweet Noodles">
-            <img src="items/maggi.jpg" class="food-photo">
-            <div class="food-info">
-                <p class="food-name">Bangkok Sweet Noodles</p>
-                <p class="food-price">₹99</p>
-            </div>
-            </div>
-
-            <div class="food-card" data-name="Mexican Noodles">
-            <img src="items/maggi.jpg" class="food-photo">
-            <div class="food-info"> 
-                <p class="food-name">Mexican Noodles</p>
-                <p class="food-price">₹99</p>
-            </div>
-            </div>
+                <div class="food-card" data-name="Maggi Masala Club Sandwich">
+                    <img src="items/maggi.jpg" class="food-photo">
+                    <div class="food-info">
+                        <p class="food-name">Maggi Masala Club Sandwich</p>
+                        <p class="food-price">₹60</p>
+                    </div>
+                </div>
 
             </div>
         </div>
 
-        <!-- REVIEWS -->
-        <!-- <div class="info-card">
-            <p class="card-heading">⭐ Student Reviews</p>
-
-            <div class="review-box">
-                <p class="stars">★★★★★</p>
-                <p>"Best place for late-night Maggi cravings."</p>
-                <p class="student-credit">- Rohit (3rd Year)</p>
-            </div>
-        </div> -->
-
     </div>
 
-    <script src = "nescafe.js"> </script>
+    <script src="nescafe.js"></script>
 </body>
 </html>
