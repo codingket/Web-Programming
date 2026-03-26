@@ -65,12 +65,11 @@ async function signup(event){
   else {
     localStorage.setItem("username", username);
 
-    alert("Account created! Please login.");
+    alert("Account created! Redirecting...");
 
-    // switch to login form (uses your UI toggle)
-    if(typeof toggleForm === "function"){
-      toggleForm();
-    }
+    setTimeout(() => {
+      window.location.href = "index.html";
+    }, 1000);
   }
 }
 
