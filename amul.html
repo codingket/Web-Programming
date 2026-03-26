@@ -1,332 +1,356 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amul Ice Cream | NITW</title>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap"
-        rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary: #0d47a1;
+            --accent: #1565c0;
+            --bg: #f0f4f8;
+            --card-bg: #ffffff;
+            --text-main: #1a202c;
+            --text-light: #718096;
+        }
+
         body {
             margin: 0;
             font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: #f8fbff;
+            background-color: var(--bg);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        /* NAVIGATION */
+        .navbar {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            padding: 15px 5%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            display: flex;
+            align-items: center;
+        }
+
+            .navbar a {
+                text-decoration: none;
+                color: var(--primary);
+                font-weight: 700;
+                font-size: 14px;
+                transition: 0.2s;
+            }
+
+                .navbar a:hover {
+                    opacity: 0.7;
+                }
+
+        /* HERO BANNER */
+        .stall-banner {
+            background: linear-gradient(135deg, #0d47a1 0%, #1e88e5 100%);
+            color: white;
+            padding: 80px 20px;
             text-align: center;
         }
 
-        /* NAVBAR */
-        .navbar {
-            background-color: white;
-            padding: 20px 50px;
-            text-align: left;
-            border-bottom: 1px solid #eee;
-        }
+            .stall-banner h1 {
+                margin: 0;
+                font-size: clamp(32px, 5vw, 48px);
+                font-weight: 800;
+                letter-spacing: -1px;
+            }
 
-        .navbar a {
-            text-decoration: none;
-            color: #0d47a1;
-            font-weight: 700;
-        }
+            .stall-banner p {
+                margin-top: 10px;
+                opacity: 0.9;
+                font-weight: 500;
+            }
 
-        /* BANNER */
-        .stall-banner {
-            background-color: #0d47a1;
-            color: white;
-            padding: 80px 20px;
-        }
-
-        .stall-banner h1 {
-            margin: 0;
-            font-size: 50px;
-            font-weight: 800;
-        }
-
-        /* CONTAINER */
+        /* MAIN CONTENT */
         .content-container {
-            width: 1000px;
-            margin: 40px auto;
+            max-width: 1200px;
+            margin: -40px auto 40px;
+            padding: 0 20px;
         }
 
-        /* INFO CARD */
         .info-card {
-            background-color: white;
-            padding: 40px;
-            border-radius: 25px;
-            margin-bottom: 30px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-            text-align: left;
-        }
-
-        .location-tag {
-            color: #1565c0;
-            font-weight: 800;
-            font-size: 13px;
-        }
-
-        .card-heading {
-            font-size: 24px;
-            font-weight: 800;
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 24px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
             margin-bottom: 25px;
         }
 
-        /* GRID */
+        /* SEARCH AREA */
+        .search-container {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        #menuSearch {
+            width: 100%;
+            max-width: 500px;
+            padding: 16px 24px;
+            border-radius: 16px;
+            border: 2px solid #e2e8f0;
+            font-size: 16px;
+            font-family: inherit;
+            outline: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+        }
+
+            #menuSearch:focus {
+                border-color: var(--primary);
+                box-shadow: 0 0 0 4px rgba(13, 71, 161, 0.1);
+            }
+
+        /* GRID SYSTEM */
         .menu-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 25px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 30px;
         }
 
         .category-title {
-            width: 100%;
-            color: #0d47a1;
-            font-size: 18px;
+            grid-column: 1 / -1;
+            font-size: 20px;
             font-weight: 800;
-            text-transform: uppercase;
-            margin: 30px 0 10px;
-            border-bottom: 2px solid #e3f2fd;
-            padding-bottom: 5px;
+            color: var(--primary);
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
         }
 
-        /* CARD */
+            .category-title::after {
+                content: "";
+                flex: 1;
+                height: 2px;
+                background: #e2e8f0;
+            }
+
+        /* FOOD CARDS */
         .food-card {
-            background-color: white;
-            border: 1px solid #eee;
-            border-radius: 18px;
-            width: 220px;
+            background: var(--card-bg);
+            border-radius: 20px;
             overflow: hidden;
-            transition: 0.3s ease;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 1px solid #edf2f7;
+            display: flex;
+            flex-direction: column;
         }
 
-        .food-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+            .food-card:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 20px 30px rgba(0,0,0,0.1);
+            }
+
+        .image-wrapper {
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
         }
 
         .food-photo {
             width: 100%;
-            height: 140px;
+            height: 100%;
             object-fit: cover;
-            background-color: #e3f2fd;
+            transition: transform 0.5s ease;
+        }
+
+        .food-card:hover .food-photo {
+            transform: scale(1.1);
         }
 
         .food-info {
-            padding: 15px;
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
         .food-name {
             font-weight: 700;
-            font-size: 16px;
-            margin: 0;
+            font-size: 18px;
+            margin: 0 0 10px 0;
+            color: var(--text-main);
+        }
+
+        .food-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 15px;
         }
 
         .food-price {
-            color: #1565c0;
+            color: var(--accent);
             font-weight: 800;
-            margin-top: 8px;
+            font-size: 18px;
         }
 
-        /* REVIEWS */
-        .review-box {
-            border-left: 5px solid #0d47a1;
-            padding-left: 20px;
-            margin-bottom: 20px;
-        }
-
-        .stars {
-            color: #ffa000;
-        }
-
-        .student-credit {
+        .add-btn {
+            background: #f0f7ff;
+            color: var(--primary);
+            border: none;
+            padding: 8px 16px;
+            border-radius: 10px;
             font-weight: 700;
-            color: #0d47a1;
+            cursor: pointer;
+            font-size: 13px;
+        }
+
+        @media (max-width: 600px) {
+            .navbar {
+                padding: 15px 20px;
+            }
+
+            .content-container {
+                margin-top: -20px;
+            }
         }
     </style>
 </head>
-
 <body>
 
-    <!-- NAVBAR -->
-    <div class="navbar">
-        <a href="index.html">← Back to Campus Directory</a>
-    </div>
+    <nav class="navbar">
+        <a href="#">← Back to Directory</a>
+    </nav>
 
-    <!-- BANNER -->
-    <div class="stall-banner">
-        <h1>Amul Ice Cream</h1>
-    </div>
+    <header class="stall-banner">
+        <h1>Amul Ice Cream Parlour</h1>
+        <p>SAC Area, NIT Warangal • Open until 11:00 PM</p>
+    </header>
 
-    <!-- CONTENT -->
-    <div class="content-container">
+    <main class="content-container">
 
-        <!-- INFO -->
-        <div class="info-card">
-            <p class="location-tag">📍 SAC Area, NIT Warangal</p>
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3794.8821507453245!2d79.53026197516634!3d17.984219085337784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a334fbc0e73da33%3A0x65c556630c690f8!2sFOOD%20STREET%20NITW!5e0!3m2!1sen!2sin!4v1774536730774!5m2!1sen!2sin"
-                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade" width="100%" height="400"></iframe>
-            <p style="color:#444;">
-                The go-to spot for chilled treats, milkshakes, and late-night desserts. Perfect for beating the Warangal
-                heat.
-            </p>
+        <div class="search-container">
+            <input type="text" id="menuSearch" placeholder="Search for ice cream, shakes, or snacks..." onkeyup="filterMenu()">
         </div>
 
-        <!-- MENU -->
-        <div class="info-card">
+        <div class="menu-grid" id="menuItems">
 
-            <!-- 🔍 SEARCH BAR -->
-            <input type="text" id="menuSearch" placeholder="Search items..."
-                style="padding:10px; width:300px; border-radius:10px; border:1px solid #ccc; margin-bottom:20px;">
+            <div class="category-title">Ice Cream & Kulfi</div>
 
-            <p class="card-heading">🍦 Ice Cream Menu</p>
-
-            <div class="menu-grid">
-
-                <!-- SCOOPS -->
-                <!-- SCOOPS -->
-                <div class="category-title">Scoops</div>
-
-                <div class="food-card" data-name="Vanilla">
-                    <img src="vanilla.jpg" class="food-photo">
-                    <div class="food-info">
-                        <p class="food-name">Vanilla</p>
-                        <p class="food-price">₹30</p>
-                    </div>
+            <div class="food-card" data-name="Chocolate Ice Cream">
+                <div class="image-wrapper"><img src="https://tse3.mm.bing.net/th/id/OIP.QmQw3I28kpsYSF9o5RvGIQHaH7?rs=1&pid=ImgDetMain&o=7&rm=3" class="food-photo" alt="Chocolate"></div>
+                <div class="food-info">
+                    <p class="food-name">Chocolate ice cream</p>
+                    <div class="food-footer"><span class="food-price">₹40</span><button class="add-btn">View</button></div>
                 </div>
-
-                <div class="food-card" data-name="Chocolate">
-                    <img src="chocolate.jpg" class="food-photo">
-                    <div class="food-info">
-                        <p class="food-name">Chocolate</p>
-                        <p class="food-price">₹30</p>
-                    </div>
-                </div>
-
-                <div class="food-card" data-name="Strawberry">
-                    <img src="strawberry.jpg" class="food-photo">
-                    <div class="food-info">
-                        <p class="food-name">Strawberry</p>
-                        <p class="food-price">₹30</p>
-                    </div>
-                </div>
-
-                <div class="food-card" data-name="Butterscotch">
-                    <img src="butterscotch.jpg" class="food-photo">
-                    <div class="food-info">
-                        <p class="food-name">Butterscotch</p>
-                        <p class="food-price">₹35</p>
-                    </div>
-                </div>
-
-                <!-- SUNDAES -->
-                <div class="category-title">Sundaes</div>
-
-                <div class="food-card" data-name="Chocolate Sundae">
-                    <img src="choco_sundae.jpg" class="food-photo">
-                    <div class="food-info">
-                        <p class="food-name">Chocolate Sundae</p>
-                        <p class="food-price">₹80</p>
-                    </div>
-                </div>
-
-                <div class="food-card" data-name="Brownie Sundae">
-                    <img src="brownie.jpg" class="food-photo">
-                    <div class="food-info">
-                        <p class="food-name">Brownie Sundae</p>
-                        <p class="food-price">₹100</p>
-                    </div>
-                </div>
-
-                <div class="food-card" data-name="Fruit Sundae">
-                    <img src="fruit_sundae.jpg" class="food-photo">
-                    <div class="food-info">
-                        <p class="food-name">Fruit Sundae</p>
-                        <p class="food-price">₹90</p>
-                    </div>
-                </div>
-
-                <!-- SHAKES -->
-                <div class="category-title">Milkshakes</div>
-
-                <div class="food-card" data-name="Oreo Shake">
-                    <img src="oreo.jpg" class="food-photo">
-                    <div class="food-info">
-                        <p class="food-name">Oreo Shake</p>
-                        <p class="food-price">₹110</p>
-                    </div>
-                </div>
-
-                <div class="food-card" data-name="KitKat Shake">
-                    <img src="kitkat.jpg" class="food-photo">
-                    <div class="food-info">
-                        <p class="food-name">KitKat Shake</p>
-                        <p class="food-price">₹110</p>
-                    </div>
-                </div>
-
-                <div class="food-card" data-name="Mango Shake">
-                    <img src="mango.jpg" class="food-photo">
-                    <div class="food-info">
-                        <p class="food-name">Mango Shake</p>
-                        <p class="food-price">₹100</p>
-                    </div>
-                </div>
-
-                <!-- ICE CREAM CUPS -->
-                <div class="category-title">Ice Cream Cups</div>
-
-                <div class="food-card" data-name="Amul Cup">
-                    <img src="amul_cup.jpg" class="food-photo">
-                    <div class="food-info">
-                        <p class="food-name">Amul Cup</p>
-                        <p class="food-price">₹40</p>
-                    </div>
-                </div>
-
-                <div class="food-card" data-name="Rajbhog Cup">
-                    <img src="rajbhog.jpg" class="food-photo">
-                    <div class="food-info">
-                        <p class="food-name">Rajbhog Cup</p>
-                        <p class="food-price">₹50</p>
-                    </div>
-                </div>
-
-                <!-- EXTRAS -->
-                <div class="category-title">Extras</div>
-
-                <div class="food-card" data-name="Cone">
-                    <img src="cone.jpg" class="food-photo">
-                    <div class="food-info">
-                        <p class="food-name">Cone</p>
-                        <p class="food-price">₹10</p>
-                    </div>
-                </div>
-
-                <div class="food-card" data-name="Chocolate Syrup">
-                    <img src="choco_syrup.jpg" class="food-photo">
-                    <div class="food-info">
-                        <p class="food-name">Chocolate Syrup</p>
-                        <p class="food-price">₹20</p>
-                    </div>
-                </div>
-
             </div>
+
+            <div class="food-card" data-name="Mango Ice Cream">
+                <div class="image-wrapper"><img src="https://tiimg.tistatic.com/fp/1/007/844/packaging-size-60-ml-mango-flavor-duetz-amul-ice-cream--549.jpg" class="food-photo" alt="Mango"></div>
+                <div class="food-info">
+                    <p class="food-name">Mango ice cream</p>
+                    <div class="food-footer"><span class="food-price">₹30</span><button class="add-btn">View</button></div>
+                </div>
+            </div>
+
+            <div class="food-card" data-name="Protein Kulfi">
+                <div class="image-wrapper"><img src="https://images.unsplash.com/photo-1621509376809-541e2e987c2f?auto=format&fit=crop&w=500" class="food-photo" alt="Kulfi"></div>
+                <div class="food-info">
+                    <p class="food-name">Amul Protein Kulfi</p>
+                    <div class="food-footer"><span class="food-price">₹40</span><button class="add-btn">View</button></div>
+                </div>
+            </div>
+
+            <div class="food-card" data-name="Pistachio Ice Cream">
+                <div class="image-wrapper"><img src="https://images.unsplash.com/photo-1505394033323-424e6221e33c?auto=format&fit=crop&w=500" class="food-photo" alt="Pista"></div>
+                <div class="food-info">
+                    <p class="food-name">Pistachio Ice Cream</p>
+                    <div class="food-footer"><span class="food-price">₹25</span><button class="add-btn">View</button></div>
+                </div>
+            </div>
+
+            <div class="category-title">Cold Beverages</div>
+
+            <div class="food-card" data-name="Butterscotch Shake">
+                <div class="image-wrapper"><img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=500" class="food-photo" alt="Shake"></div>
+                <div class="food-info">
+                    <p class="food-name">Butterscotch Shake</p>
+                    <div class="food-footer"><span class="food-price">₹100</span><button class="add-btn">View</button></div>
+                </div>
+            </div>
+
+            <div class="food-card" data-name="Lemon Juice">
+                <div class="image-wrapper"><img src="https://images.unsplash.com/photo-1523677012304-d02511dab81b?auto=format&fit=crop&w=500" class="food-photo" alt="Lemonade"></div>
+                <div class="food-info">
+                    <p class="food-name">Fresh Lemon Juice</p>
+                    <div class="food-footer"><span class="food-price">₹10</span><button class="add-btn">View</button></div>
+                </div>
+            </div>
+            <div class="food-card" data-name="Oreo Shake">
+                <div class="image-wrapper"><img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=500" class="food-photo" alt="Shake"></div>
+                <div class="food-info">
+                    <p class="food-name">Oreo Shake</p>
+                    <div class="food-footer"><span class="food-price">₹65</span><button class="add-btn">View</button></div>
+                </div>
+            </div>
+
+            <div class="category-title">Hot Snacks</div>
+
+            <div class="food-card" data-name="Paneer Sandwich">
+                <div class="image-wrapper"><img src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=500" class="food-photo" alt="Paneer"></div>
+                <div class="food-info">
+                    <p class="food-name"> Paneer Sandwich</p>
+                    <div class="food-footer"><span class="food-price">690</span><button class="add-btn">View</button></div>
+                </div>
+            </div>
+
+            <div class="food-card" data-name="French Fries">
+                <div class="image-wrapper"><img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=500" class="food-photo" alt="Fries"></div>
+                <div class="food-info">
+                    <p class="food-name">French Fries</p>
+                    <div class="food-footer"><span class="food-price">₹50</span><button class="add-btn">View</button></div>
+                </div>
+            </div>
+
+            <div class="food-card" data-name="Chicken Sandwich">
+                <div class="image-wrapper"><img src="https://images.unsplash.com/photo-1550507992-eb63ffee0847?auto=format&fit=crop&w=500" class="food-photo" alt="Chicken"></div>
+                <div class="food-info">
+                    <p class="food-name">Chicken Sandwich</p>
+                    <div class="food-footer"><span class="food-price">₹60</span><button class="add-btn">View</button></div>
+                </div>
+            </div>
+            <div class="food-card" data-name="Paneer Burger">
+                <div class="image-wrapper"><img src="https://images.unsplash.com/photo-1550507992-eb63ffee0847?auto=format&fit=crop&w=500" class="food-photo" alt="Chicken"></div>
+                <div class="food-info">
+                    <p class="food-name">Paneer Burger</p>
+                    <div class="food-footer"><span class="food-price">₹60</span><button class="add-btn">View</button></div>
+                </div>
+            </div>
+            <div class="food-card" data-name="Chicken Burger">
+                <div class="image-wrapper"><img src="https://images.unsplash.com/photo-1550507992-eb63ffee0847?auto=format&fit=crop&w=500" class="food-photo" alt="Chicken"></div>
+                <div class="food-info">
+                    <p class="food-name">Chicken Burger</p>
+                    <div class="food-footer"><span class="food-price">₹60</span><button class="add-btn">View</button></div>
+                </div>
+            </div>
+
         </div>
+    </main>
 
-        <!-- REVIEWS -->
-        <!-- <div class="info-card">
-            <p class="card-heading">⭐ Student Reviews</p>
+    <script>
+        function filterMenu() {
+            let input = document.getElementById('menuSearch').value.toLowerCase();
+            let cards = document.getElementsByClassName('food-card');
 
-            <div class="review-box">
-                <p class="stars">★★★★★</p>
-                <p>"Best place for late night ice cream runs."</p>
-                <p class="student-credit">- Sneha (3rd Year)</p>
-            </div>
-        </div> -->
-        <script src="amul.js"></script>
-
-    </div>
-
+            for (let i = 0; i < cards.length; i++) {
+                let name = cards[i].getAttribute('data-name').toLowerCase();
+                if (name.includes(input)) {
+                    cards[i].style.display = "flex";
+                } else {
+                    cards[i].style.display = "none";
+                }
+            }
+        }
+    </script>
 </body>
-
 </html>
