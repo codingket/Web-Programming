@@ -3,7 +3,7 @@ import { createClient } from 'https://esm.sh/@supabase/supabase-js'
 let currentUser = null;
 
 const supabase = createClient(
-  'https://wbtzkgpkcigqaecdjlbn.supabase.co',
+  'https://mngbpkiqpvtflhwfqoxj.supabase.co',
   'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1uZ2Jwa2lxcHZ0Zmxod2Zxb3hqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQ0NTYwOTMsImV4cCI6MjA5MDAzMjA5M30.q6CraKNW5obBpt3c8ZB1fEirVVVrstODFhTbIgKzSO0'
 )
 
